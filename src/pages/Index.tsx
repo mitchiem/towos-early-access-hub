@@ -1,12 +1,179 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { WaitlistForm } from "@/components/WaitlistForm";
+import { ProblemCard } from "@/components/ProblemCard";
+import { VideoTestimonial } from "@/components/VideoTestimonial";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp } from "lucide-react";
+import heroImage from "@/assets/hero-tow-truck.jpg";
 
 const Index = () => {
+  const problems = [
+    {
+      icon: Phone,
+      title: "Missed Calls While Towing",
+      description: "You're out on a job, phone rings, customer needs help... but you can't answer safely. They call your competitor next.",
+      cost: "$3,000+ per month",
+      costLabel: "Average Lost Revenue:"
+    },
+    {
+      icon: DollarSign,
+      title: "Can't Afford Full-Time Dispatchers",
+      description: "Hiring dispatcher costs $60,000+ yearly plus benefits. Small operators can't justify this expense but desperately need the help.",
+      cost: "$60,000 - $80,000",
+      costLabel: "Annual Cost:"
+    },
+    {
+      icon: HelpCircle,
+      title: "No Driver Accountability",
+      description: "\"Did Jake finish the 5th Street job?\" \"Who collected payment from the BMW tow?\" Complete chaos with no tracking system.",
+      cost: "$1,500+ per month",
+      costLabel: "Lost Revenue:"
+    },
+    {
+      icon: FileText,
+      title: "Manual Job Assignments",
+      description: "Calling each driver individually, keeping track on paper, forgetting assignments. It's 2025 - there's got to be a better way.",
+      cost: "15+ hours per week",
+      costLabel: "Time Wasted:"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Administrative Nightmare",
+      description: "Invoicing, payment collection, scheduling, customer follow-up - you're drowning in paperwork instead of growing your business.",
+      cost: "Unlimited",
+      costLabel: "Opportunity Cost:"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: "Never Miss Another Call",
+      description: "Automated call handling and smart dispatch routing"
+    },
+    {
+      icon: Users,
+      title: "Virtual Dispatcher",
+      description: "AI-powered dispatch for a fraction of the cost"
+    },
+    {
+      icon: TrendingUp,
+      title: "Complete Visibility",
+      description: "Real-time tracking of all jobs and drivers"
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-card">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Truck className="h-4 w-4" />
+                The Complete Towing Operating System
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Stop Losing Money on{" "}
+                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  Missed Calls
+                </span>{" "}
+                & Manual Dispatch
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                The Complete Towing Operating System That Solves Your Biggest Problems
+              </p>
+              
+              <div className="max-w-lg mx-auto">
+                <WaitlistForm />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problems Section */}
+      <section className="py-20 bg-card/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 text-primary">
+              Are These Problems Costing You Thousands Every Month?
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Every missed call and manual process is money out of your pocket
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {problems.map((problem, index) => (
+              <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <ProblemCard {...problem} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonial Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <VideoTestimonial />
+        </div>
+      </section>
+
+      {/* Benefits Preview Section */}
+      <section className="py-20 bg-card/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">
+              How TowOS Transforms Your Business
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Built specifically for towing operators who want to grow without the headaches
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-muted-foreground">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="max-w-lg mx-auto">
+              <WaitlistForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-background border-t border-border py-12">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Truck className="h-6 w-6 text-primary" />
+            <span className="text-2xl font-bold">TowOS</span>
+          </div>
+          <p className="text-muted-foreground mb-4">
+            The Complete Towing Operating System
+          </p>
+          <p className="text-sm text-muted-foreground">
+            © 2025 TowOS. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
