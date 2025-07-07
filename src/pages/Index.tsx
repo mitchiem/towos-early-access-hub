@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
-import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp } from "lucide-react";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-tow-truck.jpg";
 
 const Index = () => {
@@ -22,13 +22,6 @@ const Index = () => {
       costLabel: "Annual Cost:"
     },
     {
-      icon: HelpCircle,
-      title: "No Driver Accountability",
-      description: "\"Did Jake finish the 5th Street job?\" \"Who collected payment from the BMW tow?\" Complete chaos with no tracking system.",
-      cost: "$1,500+ per month",
-      costLabel: "Lost Revenue:"
-    },
-    {
       icon: FileText,
       title: "Manual Job Assignments",
       description: "Calling each driver individually, keeping track on paper, forgetting assignments. It's 2025 - there's got to be a better way.",
@@ -37,10 +30,47 @@ const Index = () => {
     },
     {
       icon: AlertTriangle,
-      title: "Administrative Nightmare",
-      description: "Invoicing, payment collection, scheduling, customer follow-up - you're drowning in paperwork instead of growing your business.",
-      cost: "Unlimited",
-      costLabel: "Opportunity Cost:"
+      title: "Administrative Chaos & No Driver Accountability",
+      description: "\"Did Jake finish the 5th Street job?\" Invoicing, payment collection, scheduling - you're drowning in paperwork with zero tracking system.",
+      cost: "$2,500+ per month",
+      costLabel: "Lost Revenue & Opportunity Cost:"
+    },
+    {
+      icon: Star,
+      title: "Missing Customer Reviews",
+      description: "Happy customers leave but never share their experience. No review system means losing potential business from word-of-mouth referrals.",
+      cost: "$2,500+ per month",
+      costLabel: "Lost Business:"
+    },
+    {
+      icon: FileText,
+      title: "Vehicle Documentation Issues",
+      description: "Missing photos, incomplete paperwork, liability disputes. Poor documentation leads to insurance claims and legal headaches.",
+      cost: "$1,800+ per incident",
+      costLabel: "Average Claim Cost:"
+    }
+  ];
+
+  const appScreenshots = [
+    {
+      icon: Monitor,
+      title: "Dispatch Dashboard",
+      description: "Real-time job management and driver tracking in one unified view"
+    },
+    {
+      icon: MessageCircle,
+      title: "Call Management",
+      description: "Automated call handling and smart routing system"
+    },
+    {
+      icon: Star,
+      title: "Customer Portal",
+      description: "Review requests and seamless customer communication tools"
+    },
+    {
+      icon: BarChart3,
+      title: "Analytics & Reports",
+      description: "Revenue tracking and performance metrics dashboard"
     }
   ];
 
@@ -127,6 +157,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* App Screenshots Section */}
+      <section className="py-20 bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">
+              See TowOS in Action
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Get a preview of the complete towing operations platform
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {appScreenshots.map((screenshot, index) => (
+              <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="bg-card/50 backdrop-blur-sm border border-border/30 rounded-lg overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                    <div className="text-center">
+                      <screenshot.icon className="h-16 w-16 text-primary mx-auto mb-4" />
+                      <div className="text-sm text-muted-foreground px-4">
+                        Screenshot Preview Coming Soon
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{screenshot.title}</h3>
+                    <p className="text-muted-foreground">{screenshot.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Preview Section */}
       <section className="py-20 bg-card/10">
         <div className="container mx-auto px-4">
@@ -155,6 +220,22 @@ const Index = () => {
             <div className="max-w-lg mx-auto">
               <WaitlistForm />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Warren Buffett Quote Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <blockquote className="text-2xl md:text-3xl font-medium mb-6 text-foreground leading-relaxed">
+              "There seems to be no correlation between the difficulty of an idea and its success."
+            </blockquote>
+            <cite className="text-lg text-muted-foreground mb-8 block">— Warren Buffett</cite>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Transforming your tow operations digitally makes sense, and there are no extra points for doing it harder. 
+              TowOS simplifies what matters most: growing your business profitably.
+            </p>
           </div>
         </div>
       </section>
