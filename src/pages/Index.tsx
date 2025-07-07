@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
+import CountdownClock from "@/components/CountdownClock";
 import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-tow-truck.jpg";
 
@@ -127,6 +128,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Countdown Clock Section */}
+      <CountdownClock />
 
       {/* Problems Section */}
       <section className="py-20 bg-card/20">
