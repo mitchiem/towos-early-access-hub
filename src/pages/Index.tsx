@@ -178,7 +178,7 @@ const Index = () => {
             <div className="text-center">
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/557c1134-8768-48bf-a33f-58a3c951578d.png" 
+                  src="/lovable-uploads/df42e0dd-4325-47fb-be18-3aab35725117.png" 
                   alt="TowOS Dispatch Dashboard"
                   className="w-full h-full object-cover"
                 />
@@ -195,7 +195,7 @@ const Index = () => {
             <div className="text-center">
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/3898ee4f-b498-4606-9414-b704283ebfb6.png" 
+                  src="/lovable-uploads/cea6183d-77d8-4cd1-a779-e5f0b5580d4e.png" 
                   alt="TowOS Driver Communication"
                   className="w-full h-full object-cover"
                 />
@@ -212,7 +212,7 @@ const Index = () => {
             <div className="text-center">
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/00b57b15-533c-4056-8c7b-86a37c101c9a.png" 
+                  src="/lovable-uploads/fec39c6b-3b71-40cd-a650-f6387f747459.png" 
                   alt="TowOS Invoice & Payment"
                   className="w-full h-full object-cover"
                 />
@@ -225,20 +225,20 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Digital Documentation System */}
+            {/* Smart Job Assignment */}
             <div className="text-center">
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/b6c67c18-dca9-416d-b658-dd2054876153.png" 
-                  alt="TowOS Documentation System"
+                  src="/lovable-uploads/c7a63297-85f4-43c9-b228-011d842bf166.png" 
+                  alt="TowOS Job Assignment"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Digital Documentation System
+                Smart Job Assignment
               </h3>
               <p className="text-muted-foreground">
-                Required photo capture and vehicle documentation to eliminate liability issues
+                Intelligent driver assignment with customer notes and location tracking
               </p>
             </div>
 
@@ -246,7 +246,7 @@ const Index = () => {
             <div className="text-center">
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/2a495edc-1eb3-452d-9f3d-c052f8357510.png" 
+                  src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png" 
                   alt="TowOS Analytics Dashboard"
                   className="w-full h-full object-cover"
                 />
@@ -259,20 +259,20 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Smart Job Assignment */}
+            {/* Digital Documentation System */}
             <div className="text-center">
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/39680ce8-b36e-46dd-a76e-bfe4355002d1.png" 
-                  alt="TowOS Job Assignment"
+                  src="/lovable-uploads/720636d8-797c-453d-a474-58d08a99966d.png" 
+                  alt="TowOS Documentation System"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                Smart Job Assignment
+                Digital Documentation System
               </h3>
               <p className="text-muted-foreground">
-                Intelligent driver assignment with customer notes and location tracking
+                Required photo capture and vehicle documentation to eliminate liability issues
               </p>
             </div>
           </div>
