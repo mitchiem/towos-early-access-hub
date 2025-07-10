@@ -162,36 +162,119 @@ const Index = () => {
       </section>
 
       {/* App Screenshots Section */}
-      <section className="py-20 bg-card/30">
+      <section className="py-20 bg-gradient-to-br from-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
               See TowOS in Action
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Get a preview of the complete towing operations platform
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Real mobile app screenshots showing the complete towing management platform
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {appScreenshots.map((screenshot, index) => (
-              <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                <div className="bg-card/50 backdrop-blur-sm border border-border/30 rounded-lg overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                    <div className="text-center">
-                      <screenshot.icon className="h-16 w-16 text-primary mx-auto mb-4" />
-                      <div className="text-sm text-muted-foreground px-4">
-                        Screenshot Preview Coming Soon
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{screenshot.title}</h3>
-                    <p className="text-muted-foreground">{screenshot.description}</p>
-                  </div>
-                </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Dispatch Dashboard */}
+            <div className="text-center">
+              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/557c1134-8768-48bf-a33f-58a3c951578d.png" 
+                  alt="TowOS Dispatch Dashboard"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Dispatch Dashboard
+              </h3>
+              <p className="text-muted-foreground">
+                Real-time job management with instant notifications for new tow requests
+              </p>
+            </div>
+
+            {/* Driver Communication Hub */}
+            <div className="text-center">
+              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/3898ee4f-b498-4606-9414-b704283ebfb6.png" 
+                  alt="TowOS Driver Communication"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Driver Communication Hub
+              </h3>
+              <p className="text-muted-foreground">
+                Seamless coordination between dispatchers and drivers with live job status updates
+              </p>
+            </div>
+
+            {/* Invoice & Payment Tracking */}
+            <div className="text-center">
+              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/00b57b15-533c-4056-8c7b-86a37c101c9a.png" 
+                  alt="TowOS Invoice & Payment"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Invoice & Payment Tracking
+              </h3>
+              <p className="text-muted-foreground">
+                Automated invoicing and payment collection with real-time financial insights
+              </p>
+            </div>
+
+            {/* Digital Documentation System */}
+            <div className="text-center">
+              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/b6c67c18-dca9-416d-b658-dd2054876153.png" 
+                  alt="TowOS Documentation System"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Digital Documentation System
+              </h3>
+              <p className="text-muted-foreground">
+                Required photo capture and vehicle documentation to eliminate liability issues
+              </p>
+            </div>
+
+            {/* Performance Analytics */}
+            <div className="text-center">
+              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/2a495edc-1eb3-452d-9f3d-c052f8357510.png" 
+                  alt="TowOS Analytics Dashboard"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Performance Analytics
+              </h3>
+              <p className="text-muted-foreground">
+                Track revenue, completed jobs, and staff performance with comprehensive reporting
+              </p>
+            </div>
+
+            {/* Smart Job Assignment */}
+            <div className="text-center">
+              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/39680ce8-b36e-46dd-a76e-bfe4355002d1.png" 
+                  alt="TowOS Job Assignment"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Smart Job Assignment
+              </h3>
+              <p className="text-muted-foreground">
+                Intelligent driver assignment with customer notes and location tracking
+              </p>
+            </div>
           </div>
         </div>
       </section>

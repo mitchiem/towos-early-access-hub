@@ -2,37 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TowOS Design System - Professional automotive/towing theme with dark aesthetic */
+/* TowOS Design System - Professional blue theme inspired by roadsideroi.com */
 
 @layer base {
   :root {
-    --background: 222 20% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
 
-    --card: 220 15% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
 
-    --popover: 220 15% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
 
-    --primary: 30 100% 55%;
-    --primary-foreground: 222 20% 8%;
+    --primary: 221 83% 65%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 84% 4.9%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 215 15% 70%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 46.9%;
 
-    --accent: 30 100% 55%;
-    --accent-foreground: 222 20% 8%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 84% 4.9%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 30 100% 55%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 65%;
 
     --radius: 0.5rem;
 
@@ -63,8 +63,8 @@
     --popover: 220 15% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 30 100% 60%;
-    --primary-foreground: 222 20% 5%;
+    --primary: 221 83% 65%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 220 15% 12%;
     --secondary-foreground: 210 40% 98%;
@@ -72,15 +72,15 @@
     --muted: 220 15% 12%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 30 100% 60%;
-    --accent-foreground: 222 20% 5%;
+    --accent: 221 83% 65%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 15% 15%;
     --input: 220 15% 12%;
-    --ring: 30 100% 60%;
+    --ring: 221 83% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -93,11 +93,12 @@
 
   /* Custom design tokens for TowOS */
   :root {
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(220 20% 12%));
-    --gradient-cta: linear-gradient(45deg, hsl(var(--primary)), hsl(25 100% 50%));
-    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 20% 5% / 0.8);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(221 83% 95%));
+    --gradient-cta: linear-gradient(45deg, hsl(var(--primary)), hsl(210 83% 60%));
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 8px 32px hsl(var(--primary) / 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --success: 142 71% 45%;
   }
 
   /* Additional animations */
