@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { WaitlistForm } from "@/components/WaitlistForm";
+import { InlineWaitlistForm } from "@/components/InlineWaitlistForm";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
 import CountdownClock from "@/components/CountdownClock";
 import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-tow-truck.jpg";
+import heroImage from "@/assets/hero-highway-tow.jpg";
 
 const Index = () => {
   const problems = [
@@ -122,7 +122,7 @@ const Index = () => {
               </p>
               
               <div className="max-w-lg mx-auto">
-                <WaitlistForm />
+                <InlineWaitlistForm />
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@ const Index = () => {
           
           <div className="text-center">
             <div className="max-w-lg mx-auto">
-              <WaitlistForm />
+              <InlineWaitlistForm />
             </div>
           </div>
         </div>
