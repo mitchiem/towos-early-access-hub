@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { InlineWaitlistForm } from "@/components/InlineWaitlistForm";
+import { MissedCallsCalculator } from "@/components/MissedCallsCalculator";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
 import CountdownClock from "@/components/CountdownClock";
-import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-highway-tow.jpg";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck } from "lucide-react";
 
 const Index = () => {
   const problems = [
@@ -45,8 +45,8 @@ const Index = () => {
     },
     {
       icon: FileText,
-      title: "Vehicle Documentation Issues",
-      description: "Missing photos, incomplete paperwork, liability disputes. Poor documentation leads to insurance claims and legal headaches.",
+      title: "Damage Mitigation/Reduce Fake Claims From Dishonest Customers",
+      description: "Missing photos, incomplete paperwork, liability disputes. Poor documentation leads to insurance claims and legal headaches from dishonest customers.",
       cost: "$1,800+ per incident",
       costLabel: "Average Claim Cost:"
     }
@@ -99,29 +99,88 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(/lovable-uploads/6a575055-428a-4e0b-837d-3984a0f879f2.png)` }}
         />
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="animate-fade-in-up">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Truck className="h-4 w-4" />
                 The Complete Towing Operating System
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Stop Losing Money on{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                  Missed Calls
-                </span>{" "}
-                & Manual Dispatch
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Stop Guessing, Start Knowing
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                The Complete Towing Operating System That Solves Your Biggest Problems
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
+                Real-time insights into your towing operations. Track your trucks, manage dispatches, and monitor performance from a single, intuitive dashboard.
               </p>
-              
-              <div className="max-w-lg mx-auto">
+
+              <div className="mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-destructive">
+                  Tired of Towing Business Headaches?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Lost calls, slow response times, and frustrated customers? TowOS is the AI-powered solution designed to streamline your operations and boost your bottom line.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
+                  <Play className="mr-2 h-5 w-5" />
+                  Start Free Trial
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                  <Monitor className="mr-2 h-5 w-5" />
+                  Try Live Demo
+                </Button>
+              </div>
+
+              <p className="text-sm text-muted-foreground mb-8">
+                No account required to get started. Cancel anytime.
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                    <Timer className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="text-2xl font-bold text-primary">Instant</div>
+                  <div className="text-sm text-muted-foreground">Response Times</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                    <TrendingUp className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="text-2xl font-bold text-primary">30%</div>
+                  <div className="text-sm text-muted-foreground">Increase in Revenue</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                    <Zap className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="text-2xl font-bold text-primary">Zero</div>
+                  <div className="text-sm text-muted-foreground">Missed Calls</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                    <UserCheck className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="text-2xl font-bold text-primary">Happy</div>
+                  <div className="text-sm text-muted-foreground">Customers</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Calculator and Waitlist Form Side by Side */}
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <MissedCallsCalculator />
+              </div>
+              <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <InlineWaitlistForm />
               </div>
             </div>
