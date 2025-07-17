@@ -106,23 +106,32 @@ const Index = () => {
             <div className="text-center mb-12 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Truck className="h-4 w-4" />
-                The Complete Towing Operating System
+                Early Access • Pre-Launch Pricing
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Stop Guessing, Start Knowing
+                The Complete Towing Operating System
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
-                Real-time insights into your towing operations. Track your trucks, manage dispatches, and monitor performance from a single, intuitive dashboard.
+                Run ALL parts of your towing company cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
               <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-destructive">
-                  Tired of Towing Business Headaches?
-                </h2>
+                <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+                    Early Launch Lifetime Pricing
+                  </h2>
+                  <div className="flex items-center justify-center gap-4 mb-4">
+                    <span className="text-3xl font-bold text-primary">$49/month</span>
+                    <span className="text-lg text-muted-foreground line-through">$199/month</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Lock in this price forever • Limited time • First 100 users only
+                  </p>
+                </div>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Lost calls, slow response times, and frustrated customers? TowOS is the AI-powered solution designed to streamline your operations and boost your bottom line.
+                  Stop juggling multiple systems. TowOS integrates everything your towing business needs into one powerful operating system.
                 </p>
               </div>
 
@@ -130,16 +139,16 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
                   <Play className="mr-2 h-5 w-5" />
-                  Start Free Trial
+                  Join Early Access Waitlist
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                   <Monitor className="mr-2 h-5 w-5" />
-                  Try Live Demo
+                  See Live Demo
                 </Button>
               </div>
 
               <p className="text-sm text-muted-foreground mb-8">
-                No account required to get started. Cancel anytime.
+                No payment required • Get notified when we launch • Lock in lifetime pricing
               </p>
 
               {/* Stats */}
@@ -148,29 +157,29 @@ const Index = () => {
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                     <Timer className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">Instant</div>
-                  <div className="text-sm text-muted-foreground">Response Times</div>
+                  <div className="text-2xl font-bold text-primary">One</div>
+                  <div className="text-sm text-muted-foreground">Unified System</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                     <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">30%</div>
-                  <div className="text-sm text-muted-foreground">Increase in Revenue</div>
+                  <div className="text-2xl font-bold text-primary">$49</div>
+                  <div className="text-sm text-muted-foreground">Lifetime Pricing</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                     <Zap className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">Zero</div>
-                  <div className="text-sm text-muted-foreground">Missed Calls</div>
+                  <div className="text-2xl font-bold text-primary">100</div>
+                  <div className="text-sm text-muted-foreground">Early Access Spots</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                     <UserCheck className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">Happy</div>
-                  <div className="text-sm text-muted-foreground">Customers</div>
+                  <div className="text-2xl font-bold text-primary">All</div>
+                  <div className="text-sm text-muted-foreground">Operations Covered</div>
                 </div>
               </div>
             </div>
@@ -228,10 +237,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              See TowOS in Action
+              See the Complete Operating System
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real mobile app screenshots showing the complete towing management platform
+              Every screen designed for cohesive towing operations - from first call to final payment
             </p>
           </div>
 
@@ -346,10 +355,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
-              How TowOS Transforms Your Business
+              One System. Complete Operations.
             </h2>
             <p className="text-xl text-muted-foreground">
-              Built specifically for towing operators who want to grow without the headaches
+              Stop switching between apps. TowOS runs your entire towing operation cohesively.
             </p>
           </div>
           
@@ -373,17 +382,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Warren Buffett Quote Section */}
+      {/* James Clear Quote Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <blockquote className="text-2xl md:text-3xl font-medium mb-6 text-foreground leading-relaxed">
-              "There seems to be no correlation between the difficulty of an idea and its success."
+              "You do not rise to the level of your goals. You fall to the level of your systems."
             </blockquote>
-            <cite className="text-lg text-muted-foreground mb-8 block">— Warren Buffett</cite>
+            <cite className="text-lg text-muted-foreground mb-8 block">— James Clear, Atomic Habits</cite>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Transforming your tow operations digitally makes sense, and there are no extra points for doing it harder. 
-              TowOS simplifies what matters most: growing your business profitably.
+              Your towing business needs better systems, not just better goals. 
+              TowOS is the operating system that elevates every part of your operation.
             </p>
           </div>
         </div>
