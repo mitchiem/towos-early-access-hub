@@ -12,43 +12,43 @@ const Index = () => {
       icon: Phone,
       title: "Missed Calls While Towing",
       description: "You're out on a job, phone rings, customer needs help... but you can't answer safely. They call your competitor next.",
-      cost: "$3,000+ per month",
-      costLabel: "Average Lost Revenue:"
+      cost: "3-5 calls daily",
+      costLabel: "Missed Revenue Opportunities:"
     },
     {
       icon: DollarSign,
       title: "Can't Afford Full-Time Dispatchers",
-      description: "Hiring dispatcher costs $60,000+ yearly plus benefits. Small operators can't justify this expense but desperately need the help.",
-      cost: "$60,000 - $80,000",
-      costLabel: "Annual Cost:"
+      description: "Hiring dispatcher costs $45,000-60,000 yearly plus benefits (BLS data). Small operators can't justify this expense but desperately need the help.",
+      cost: "$45,000 - $60,000",
+      costLabel: "Annual Cost (BLS):"
     },
     {
       icon: FileText,
       title: "Manual Job Assignments",
-      description: "Calling each driver individually, keeping track on paper, forgetting assignments. It's 2025 - there's got to be a better way.",
-      cost: "15+ hours per week",
-      costLabel: "Time Wasted:"
+      description: "Calling each driver individually, keeping track on paper, forgetting assignments. Conservative estimate: 5-10 minutes per job coordination.",
+      cost: "10-15 hours per week",
+      costLabel: "Time Lost:"
     },
     {
       icon: AlertTriangle,
       title: "Administrative Chaos & No Driver Accountability",
-      description: "\"Did Jake finish the 5th Street job?\" Invoicing, payment collection, scheduling - you're drowning in paperwork with zero tracking system.",
-      cost: "$2,500+ per month",
-      costLabel: "Lost Revenue & Opportunity Cost:"
+      description: "\"Did Jake finish the 5th Street job?\" Time spent on manual invoicing, payment follow-ups, and scheduling coordination adds up quickly.",
+      cost: "2-3 hours daily",
+      costLabel: "Administrative Time:"
     },
     {
       icon: Star,
       title: "Missing Customer Reviews",
-      description: "Happy customers leave but never share their experience. No review system means losing potential business from word-of-mouth referrals.",
-      cost: "$2,500+ per month",
-      costLabel: "Lost Business:"
+      description: "Happy customers leave but never share their experience. Studies show 20-30% revenue impact from missing reviews and referrals.",
+      cost: "20-30% potential growth",
+      costLabel: "Missed Opportunity:"
     },
     {
       icon: FileText,
       title: "Damage Mitigation/Reduce Fake Claims From Dishonest Customers",
-      description: "Missing photos, incomplete paperwork, liability disputes. Poor documentation leads to insurance claims and legal headaches from dishonest customers.",
-      cost: "$1,800+ per incident",
-      costLabel: "Average Claim Cost:"
+      description: "Missing photos, incomplete paperwork, liability disputes. Insurance industry data shows poor documentation significantly increases claim costs.",
+      cost: "$500 - $3,000 per claim",
+      costLabel: "Claim Cost Range:"
     }
   ];
 
@@ -196,10 +196,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-primary">
-              Are These Problems Costing You Thousands Every Month?
+              How Much Time Are These Problems Actually Costing You?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Every missed call and manual process is money out of your pocket
+              Conservative estimates based on industry data and time tracking studies
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              Sources: Bureau of Labor Statistics, Industry surveys, Insurance claim data
             </p>
           </div>
           
