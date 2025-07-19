@@ -125,7 +125,6 @@ const Index = () => {
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <span className="text-2xl font-bold text-foreground">TowOS</span>
             </div>
             <Button size="sm" className="bg-primary hover:bg-primary/90" onClick={scrollToSignupForm}>
               <Star className="mr-2 h-4 w-4" />
@@ -278,7 +277,6 @@ const Index = () => {
               }}
             />
             <div className="text-left">
-              <div className="text-2xl font-bold text-foreground">TowOS</div>
               <div className="text-sm text-muted-foreground">The Complete Towing Operating System</div>
             </div>
           </div>
@@ -580,7 +578,6 @@ const Index = () => {
                 e.currentTarget.style.display = 'none';
               }}
             />
-            <span className="text-2xl font-bold">TowOS</span>
           </div>
           <p className="text-muted-foreground mb-4">
             The Complete Towing Operating System
