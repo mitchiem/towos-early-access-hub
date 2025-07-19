@@ -4,7 +4,7 @@ import { MissedCallsCalculator } from "@/components/MissedCallsCalculator";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
 import CountdownClock from "@/components/CountdownClock";
-import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X } from "lucide-react";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X, Bot, Shield, Clock } from "lucide-react";
 
 const Index = () => {
   const scrollToSignupForm = () => {
@@ -27,7 +27,7 @@ const Index = () => {
       after: {
         icon: CheckCircle,
         title: "AI Dispatcher Captures Every Call, 24/7",
-        description: "Never miss another call. AI answers instantly, captures customer info, and dispatches the job automatically"
+        description: "Advanced AI never sleeps, never misses a call. Answers instantly, captures customer info, and dispatches jobs automatically with 99.9% reliability"
       }
     },
     {
@@ -38,8 +38,8 @@ const Index = () => {
       },
       after: {
         icon: TrendingUp,
-        title: "Book More High-Profit Cash Calls Directly",
-        description: "Smart routing sends cash-paying customers directly to you, bypassing low-profit motor club dispatchers"
+        title: "Intelligent Routing Books More High-Profit Cash Calls",
+        description: "Smart AI routing learns your market and sends cash-paying customers directly to you, bypassing low-profit motor club dispatchers"
       }
     },
     {
@@ -50,8 +50,8 @@ const Index = () => {
       },
       after: {
         icon: Zap,
-        title: "Automate Dispatch, Invoicing & Payments in One Click",
-        description: "Complete job workflow automation - from initial call to final payment collection, all handled automatically"
+        title: "AI Automates Dispatch, Invoicing & Payments in One Click",
+        description: "Intelligent automation handles your entire workflow - from initial call to final payment collection, processing jobs 3x faster than manual methods"
       }
     },
     {
@@ -62,8 +62,8 @@ const Index = () => {
       },
       after: {
         icon: Monitor,
-        title: "See Your Entire Business in Real-Time on One Map",
-        description: "Live GPS tracking, job status updates, and complete visibility into every driver and job in progress"
+        title: "AI-Powered Real-Time Visibility Across Your Entire Fleet",
+        description: "Advanced tracking learns your business patterns and provides complete visibility into every driver and job, with predictive insights"
       }
     }
   ];
@@ -93,25 +93,43 @@ const Index = () => {
 
   const benefits = [
     {
-      icon: CheckCircle,
-      title: "Never Miss Another Call",
-      description: "Automated call handling and smart dispatch routing"
+      icon: Bot,
+      title: "AI Dispatcher That Never Sleeps",
+      description: "24/7 automated call handling saves you $50,000+ annually on dispatcher costs"
     },
     {
-      icon: Users,
-      title: "Virtual Dispatcher",
-      description: "AI-powered dispatch for a fraction of the cost"
+      icon: Shield,
+      title: "99.9% Call Capture Reliability",
+      description: "Advanced AI technology ensures you never miss another profitable call"
+    },
+    {
+      icon: Clock,
+      title: "3x Faster Job Processing",
+      description: "Intelligent automation completes tasks in minutes, not hours"
+    }
+  ];
+
+  const aiCredibilityStats = [
+    {
+      icon: Zap,
+      title: "3x Faster",
+      description: "AI processes jobs 3x faster than manual dispatch"
+    },
+    {
+      icon: Shield,
+      title: "99.9% Uptime",
+      description: "Advanced AI never sleeps, never misses calls"
     },
     {
       icon: TrendingUp,
-      title: "Complete Visibility",
-      description: "Real-time tracking of all jobs and drivers"
+      title: "Smart Learning",
+      description: "System learns your patterns to optimize routing"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-card">
-      {/* Header with TowOS Logo */}
+      {/* Header with Logo */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -146,23 +164,26 @@ const Index = () => {
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                  alt="TowOS" 
+                  alt="Logo" 
                   className="h-16 w-16"
                   onError={(e) => {
                     console.log('Logo failed to load in hero badge');
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                Founder's Club • Limited Time • First 100 Operators Only
+                <div className="flex items-center gap-2">
+                  <Bot className="h-4 w-4" />
+                  AI-Powered • Founder's Club • Limited Time • First 100 Operators Only
+                </div>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Stop Missing High-Profit Cash Calls.<br />
-                <span className="text-primary">Start Capturing Every Dollar.</span>
+                with <span className="text-primary">AI-Powered Dispatch.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
-                The Complete Towing Operating System that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
+                The Complete Towing Operating System powered by advanced AI that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
               <div className="mb-8">
@@ -170,10 +191,13 @@ const Index = () => {
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                      alt="TowOS" 
+                      alt="Logo" 
                       className="h-16 w-16"
                     />
-                    Founder's Club Lifetime Deal
+                    <div className="flex items-center gap-2">
+                      <Bot className="h-4 w-4" />
+                      AI-Powered Founder's Club Lifetime Deal
+                    </div>
                   </div>
                   <div className="text-center mb-6">
                     <div className="text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
@@ -194,11 +218,11 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
                   <Star className="mr-2 h-5 w-5" />
-                  Lock In My Founder's Price
+                  Lock In My AI-Powered System
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                   <Play className="mr-2 h-5 w-5" />
-                  See Live Demo
+                  See AI Demo
                 </Button>
               </div>
 
@@ -231,10 +255,10 @@ const Index = () => {
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
-                    <UserCheck className="h-6 w-6 text-primary" />
+                    <Bot className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">All</div>
-                  <div className="text-sm text-muted-foreground">Operations Covered</div>
+                  <div className="text-2xl font-bold text-primary">AI</div>
+                  <div className="text-sm text-muted-foreground">Powered Operations</div>
                 </div>
               </div>
             </div>
@@ -260,6 +284,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* AI Credibility Section */}
+      <section className="py-16 bg-gradient-to-r from-primary/5 to-primary/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Bot className="h-5 w-5" />
+              Advanced AI Technology
+            </div>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">
+              Why Our AI Outperforms Traditional Dispatch
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Built with cutting-edge AI that delivers measurable business outcomes
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {aiCredibilityStats.map((stat, index) => (
+              <div key={index} className="text-center bg-background/80 backdrop-blur-sm rounded-lg p-6 border border-primary/20">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">{stat.title}</h3>
+                <p className="text-muted-foreground">{stat.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Countdown Clock Section */}
       <CountdownClock />
 
@@ -269,7 +323,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-4 mb-6">
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-              alt="TowOS Logo" 
+              alt="Logo" 
               className="h-48 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in brand section');
@@ -278,6 +332,10 @@ const Index = () => {
             />
             <div className="text-left">
               <div className="text-sm text-muted-foreground">The Complete Towing Operating System</div>
+              <div className="text-xs text-primary flex items-center gap-1 mt-1">
+                <Bot className="h-3 w-3" />
+                Powered by Advanced AI
+              </div>
             </div>
           </div>
           <div className="w-16 h-0.5 bg-primary mx-auto"></div>
@@ -289,10 +347,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-primary">
-              Your Business Before TowOS vs. Your Business With TowOS
+              Your Business Before AI vs. Your Business With AI-Powered Operations
             </h2>
             <p className="text-xl text-muted-foreground">
-              See the transformation from chaos to control, from lost revenue to maximized profit
+              See the transformation from chaos to intelligent control, from lost revenue to maximized profit
             </p>
           </div>
           
@@ -360,19 +418,25 @@ const Index = () => {
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                alt="TowOS" 
+                alt="Logo" 
                 className="h-32 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load in app screenshots');
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <h2 className="text-4xl font-bold text-foreground">
-                Complete Operating System
-              </h2>
+              <div className="text-left">
+                <h2 className="text-4xl font-bold text-foreground">
+                  Complete Operating System
+                </h2>
+                <div className="flex items-center gap-2 text-primary mt-2">
+                  <Bot className="h-5 w-5" />
+                  <span className="text-lg font-semibold">AI-Powered</span>
+                </div>
+              </div>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Every screen designed for cohesive towing operations - from first call to final payment
+              Every screen designed for intelligent towing operations - from first call to final payment
             </p>
           </div>
 
@@ -382,7 +446,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/df42e0dd-4325-47fb-be18-3aab35725117.png" 
-                  alt="TowOS Dispatch Dashboard"
+                  alt="Dispatch Dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -399,7 +463,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/cea6183d-77d8-4cd1-a779-e5f0b5580d4e.png" 
-                  alt="TowOS Driver Communication"
+                  alt="Driver Communication"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -416,7 +480,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/fec39c6b-3b71-40cd-a650-f6387f747459.png" 
-                  alt="TowOS Invoice & Payment"
+                  alt="Invoice & Payment"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -433,7 +497,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/c7a63297-85f4-43c9-b228-011d842bf166.png" 
-                  alt="TowOS Job Assignment"
+                  alt="Job Assignment"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -450,7 +514,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png" 
-                  alt="TowOS Analytics Dashboard"
+                  alt="Analytics Dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -467,7 +531,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/720636d8-797c-453d-a474-58d08a99966d.png" 
-                  alt="TowOS Documentation System"
+                  alt="Documentation System"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -486,11 +550,15 @@ const Index = () => {
       <section className="py-20 bg-card/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Bot className="h-4 w-4" />
+              AI-Powered Operations
+            </div>
             <h2 className="text-4xl font-bold mb-6">
-              One System. Complete Operations.
+              One System. Complete Intelligence.
             </h2>
             <p className="text-xl text-muted-foreground">
-              Stop switching between apps. TowOS runs your entire towing operation cohesively.
+              Stop switching between apps. Our AI-powered system runs your entire towing operation cohesively.
             </p>
           </div>
           
@@ -513,18 +581,21 @@ const Index = () => {
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                      alt="TowOS" 
+                      alt="Logo" 
                       className="h-16 w-16"
                       onError={(e) => {
                         console.log('Logo failed to load in benefits badge');
                         e.currentTarget.style.display = 'none';
                       }}
                     />
-                    Get on the Founder's List. Launching August 15th.
+                    <div className="flex items-center gap-2">
+                      <Bot className="h-4 w-4" />
+                      Get on the AI-Powered Founder's List. Launching August 15th.
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Lock In Your Founder's Price</h3>
+                  <h3 className="text-2xl font-bold mb-2">Lock In Your AI-Powered Founder's Price</h3>
                   <p className="text-muted-foreground">
-                    Be the first to access TowOS and save $1,800+ per year
+                    Be the first to access intelligent towing operations and save $1,800+ per year
                   </p>
                 </div>
                 
@@ -535,7 +606,7 @@ const Index = () => {
                     height="400"
                     frameBorder="0"
                     className="rounded-lg"
-                    title="Join the TowOS Founder's List Form"
+                    title="Join the AI-Powered Founder's List Form"
                     sandbox="allow-forms allow-scripts allow-same-origin"
                   />
                 </div>
@@ -558,8 +629,8 @@ const Index = () => {
             </blockquote>
             <cite className="text-lg text-muted-foreground mb-8 block">— James Clear, Atomic Habits</cite>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Your towing business needs better systems, not just better goals. 
-              TowOS is the operating system that elevates every part of your operation.
+              Your towing business needs intelligent systems, not just better goals. 
+              Our AI-powered operating system elevates every part of your operation.
             </p>
           </div>
         </div>
@@ -571,7 +642,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png" 
-              alt="TowOS Logo" 
+              alt="Logo" 
               className="h-32 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in footer');
@@ -579,11 +650,15 @@ const Index = () => {
               }}
             />
           </div>
-          <p className="text-muted-foreground mb-4">
+          <p className="text-muted-foreground mb-2">
             The Complete Towing Operating System
           </p>
+          <div className="flex items-center justify-center gap-2 text-primary mb-4">
+            <Bot className="h-4 w-4" />
+            <span className="text-sm font-medium">Powered by Advanced AI</span>
+          </div>
           <p className="text-sm text-muted-foreground">
-            © 2025 TowOS. All rights reserved.
+            © 2025 All rights reserved.
           </p>
         </div>
       </footer>
