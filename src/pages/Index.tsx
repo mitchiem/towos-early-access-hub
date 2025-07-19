@@ -109,7 +109,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                 alt="TowOS Logo" 
-                className="h-10 w-auto"
+                className="h-40 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load');
                   e.currentTarget.style.display = 'none';
@@ -138,7 +138,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                   alt="TowOS" 
-                  className="h-4 w-4"
+                  className="h-16 w-16"
                   onError={(e) => {
                     console.log('Logo failed to load in hero badge');
                     e.currentTarget.style.display = 'none';
@@ -162,7 +162,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                       alt="TowOS" 
-                      className="h-4 w-4"
+                      className="h-16 w-16"
                     />
                     Founder's Club Lifetime Deal
                   </div>
@@ -261,7 +261,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
               alt="TowOS Logo" 
-              className="h-12 w-auto"
+              className="h-48 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in brand section');
                 e.currentTarget.style.display = 'none';
@@ -353,7 +353,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                 alt="TowOS" 
-                className="h-8 w-auto"
+                className="h-32 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load in app screenshots');
                   e.currentTarget.style.display = 'none';
@@ -506,7 +506,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                       alt="TowOS" 
-                      className="h-4 w-4"
+                      className="h-16 w-16"
                       onError={(e) => {
                         console.log('Logo failed to load in benefits badge');
                         e.currentTarget.style.display = 'none';
@@ -564,7 +564,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png" 
               alt="TowOS Logo" 
-              className="h-8 w-auto"
+              className="h-32 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in footer');
                 e.currentTarget.style.display = 'none';
