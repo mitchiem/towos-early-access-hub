@@ -7,6 +7,12 @@ import CountdownClock from "@/components/CountdownClock";
 import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X } from "lucide-react";
 
 const Index = () => {
+  const scrollToSignupForm = () => {
+    const signupForm = document.querySelector('iframe[title="Join the TowOS Founder\'s List Form"]');
+    if (signupForm) {
+      signupForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const beforeAfterItems = [
     {
       before: {
@@ -117,7 +123,7 @@ const Index = () => {
               />
               <span className="text-2xl font-bold text-foreground">TowOS</span>
             </div>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
+            <Button size="sm" className="bg-primary hover:bg-primary/90" onClick={scrollToSignupForm}>
               <Star className="mr-2 h-4 w-4" />
               Join Founder's Club
             </Button>
@@ -183,7 +189,7 @@ const Index = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
                   <Star className="mr-2 h-5 w-5" />
                   Lock In My Founder's Price
                 </Button>
