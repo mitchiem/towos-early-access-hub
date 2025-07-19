@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { InlineWaitlistForm } from "@/components/InlineWaitlistForm";
 import { MissedCallsCalculator } from "@/components/MissedCallsCalculator";
@@ -7,6 +8,13 @@ import CountdownClock from "@/components/CountdownClock";
 import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X } from "lucide-react";
 
 const Index = () => {
+  const scrollToWaitlist = () => {
+    const waitlistSection = document.querySelector('#waitlist-section');
+    if (waitlistSection) {
+      waitlistSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const beforeAfterItems = [
     {
       before: {
@@ -101,23 +109,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-card">
-      {/* Header with TowOS Logo */}
+      {/* Header with Logo Only */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                alt="TowOS Logo" 
-                className="h-40 w-auto"
+                alt="Logo" 
+                className="h-15 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load');
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <span className="text-2xl font-bold text-foreground">TowOS</span>
             </div>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
+            <Button size="sm" className="bg-primary hover:bg-primary/90" onClick={scrollToWaitlist}>
               <Star className="mr-2 h-4 w-4" />
               Join Founder's Club
             </Button>
@@ -134,16 +141,20 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+              {/* Main Logo - Centered and Large */}
+              <div className="mb-8">
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                  alt="TowOS" 
-                  className="h-16 w-16"
+                  alt="Logo" 
+                  className="h-32 w-auto mx-auto"
                   onError={(e) => {
-                    console.log('Logo failed to load in hero badge');
+                    console.log('Main logo failed to load');
                     e.currentTarget.style.display = 'none';
                   }}
                 />
+              </div>
+
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Founder's Club • Limited Time • First 100 Operators Only
               </div>
               
@@ -152,7 +163,7 @@ const Index = () => {
                 <span className="text-primary">Start Capturing Every Dollar.</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-2xl md:text-3xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto font-semibold">
                 The Complete Towing Operating System that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
@@ -161,8 +172,8 @@ const Index = () => {
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                      alt="TowOS" 
-                      className="h-16 w-16"
+                      alt="Logo" 
+                      className="h-8 w-8"
                     />
                     Founder's Club Lifetime Deal
                   </div>
@@ -183,7 +194,7 @@ const Index = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToWaitlist}>
                   <Star className="mr-2 h-5 w-5" />
                   Lock In My Founder's Price
                 </Button>
@@ -260,16 +271,15 @@ const Index = () => {
           <div className="flex items-center justify-center gap-4 mb-6">
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-              alt="TowOS Logo" 
-              className="h-48 w-auto"
+              alt="Logo" 
+              className="h-24 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in brand section');
                 e.currentTarget.style.display = 'none';
               }}
             />
             <div className="text-left">
-              <div className="text-2xl font-bold text-foreground">TowOS</div>
-              <div className="text-sm text-muted-foreground">The Complete Towing Operating System</div>
+              <div className="text-2xl font-bold text-foreground">The Complete Towing Operating System</div>
             </div>
           </div>
           <div className="w-16 h-0.5 bg-primary mx-auto"></div>
@@ -281,7 +291,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-primary">
-              Your Business Before TowOS vs. Your Business With TowOS
+              Your Business Before vs. Your Business With Our System
             </h2>
             <p className="text-xl text-muted-foreground">
               See the transformation from chaos to control, from lost revenue to maximized profit
@@ -352,8 +362,8 @@ const Index = () => {
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                alt="TowOS" 
-                className="h-32 w-auto"
+                alt="Logo" 
+                className="h-16 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load in app screenshots');
                   e.currentTarget.style.display = 'none';
@@ -475,14 +485,14 @@ const Index = () => {
       </section>
 
       {/* Benefits Preview Section */}
-      <section className="py-20 bg-card/10">
+      <section className="py-20 bg-card/10" id="waitlist-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
               One System. Complete Operations.
             </h2>
             <p className="text-xl text-muted-foreground">
-              Stop switching between apps. TowOS runs your entire towing operation cohesively.
+              Stop switching between apps. Our system runs your entire towing operation cohesively.
             </p>
           </div>
           
@@ -505,8 +515,8 @@ const Index = () => {
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                      alt="TowOS" 
-                      className="h-16 w-16"
+                      alt="Logo" 
+                      className="h-8 w-8"
                       onError={(e) => {
                         console.log('Logo failed to load in benefits badge');
                         e.currentTarget.style.display = 'none';
@@ -516,7 +526,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Lock In Your Founder's Price</h3>
                   <p className="text-muted-foreground">
-                    Be the first to access TowOS and save $1,800+ per year
+                    Be the first to access our system and save $1,800+ per year
                   </p>
                 </div>
                 
@@ -527,7 +537,7 @@ const Index = () => {
                     height="400"
                     frameBorder="0"
                     className="rounded-lg"
-                    title="Join the TowOS Founder's List Form"
+                    title="Join the Founder's List Form"
                     sandbox="allow-forms allow-scripts allow-same-origin"
                   />
                 </div>
@@ -551,7 +561,7 @@ const Index = () => {
             <cite className="text-lg text-muted-foreground mb-8 block">— James Clear, Atomic Habits</cite>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Your towing business needs better systems, not just better goals. 
-              TowOS is the operating system that elevates every part of your operation.
+              Our operating system elevates every part of your operation.
             </p>
           </div>
         </div>
@@ -563,20 +573,19 @@ const Index = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png" 
-              alt="TowOS Logo" 
-              className="h-32 w-auto"
+              alt="Logo" 
+              className="h-16 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in footer');
                 e.currentTarget.style.display = 'none';
               }}
             />
-            <span className="text-2xl font-bold">TowOS</span>
           </div>
           <p className="text-muted-foreground mb-4">
             The Complete Towing Operating System
           </p>
           <p className="text-sm text-muted-foreground">
-            © 2025 TowOS. All rights reserved.
+            © 2025 All rights reserved.
           </p>
         </div>
       </footer>
