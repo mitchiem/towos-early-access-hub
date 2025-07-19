@@ -110,6 +110,10 @@ const Index = () => {
                 src="/lovable-uploads/towos-logo.png" 
                 alt="TowOS Logo" 
                 className="h-10 w-auto"
+                onError={(e) => {
+                  console.log('Logo failed to load');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
               <span className="text-2xl font-bold text-foreground">TowOS</span>
             </div>
@@ -135,6 +139,10 @@ const Index = () => {
                   src="/lovable-uploads/towos-logo.png" 
                   alt="TowOS" 
                   className="h-4 w-4"
+                  onError={(e) => {
+                    console.log('Logo failed to load in hero badge');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 Founder's Club • Limited Time • First 100 Operators Only
               </div>
@@ -254,6 +262,10 @@ const Index = () => {
               src="/lovable-uploads/towos-logo.png" 
               alt="TowOS Logo" 
               className="h-12 w-auto"
+              onError={(e) => {
+                console.log('Logo failed to load in brand section');
+                e.currentTarget.style.display = 'none';
+              }}
             />
             <div className="text-left">
               <div className="text-2xl font-bold text-foreground">TowOS</div>
@@ -342,6 +354,10 @@ const Index = () => {
                 src="/lovable-uploads/towos-logo.png" 
                 alt="TowOS" 
                 className="h-8 w-auto"
+                onError={(e) => {
+                  console.log('Logo failed to load in app screenshots');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
               <h2 className="text-4xl font-bold text-foreground">
                 Complete Operating System
@@ -491,6 +507,10 @@ const Index = () => {
                       src="/lovable-uploads/towos-logo.png" 
                       alt="TowOS" 
                       className="h-4 w-4"
+                      onError={(e) => {
+                        console.log('Logo failed to load in benefits badge');
+                        e.currentTarget.style.display = 'none';
+                      }}
                     />
                     Get on the Founder's List. Launching August 15th.
                   </div>
@@ -545,6 +565,10 @@ const Index = () => {
               src="/lovable-uploads/towos-logo.png" 
               alt="TowOS Logo" 
               className="h-8 w-auto"
+              onError={(e) => {
+                console.log('Logo failed to load in footer');
+                e.currentTarget.style.display = 'none';
+              }}
             />
             <span className="text-2xl font-bold">TowOS</span>
           </div>
