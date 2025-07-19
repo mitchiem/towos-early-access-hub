@@ -186,34 +186,6 @@ const Index = () => {
                 The Complete Towing Operating System powered by advanced AI that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
-              <div className="mb-8">
-                <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl p-8 mb-6 max-w-2xl mx-auto shadow-lg">
-                  <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
-                    <img 
-                      src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
-                      alt="Logo" 
-                      className="h-16 w-16"
-                    />
-                    <div className="flex items-center gap-2">
-                      <Bot className="h-4 w-4" />
-                      AI-Powered Founder's Club Lifetime Deal
-                    </div>
-                  </div>
-                  <div className="text-center mb-6">
-                    <div className="text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
-                    <div className="text-sm text-muted-foreground mb-4">For your first truck</div>
-                    <div className="text-xl font-semibold text-foreground">
-                      Lock in just <span className="text-primary font-bold">$15/month</span> for each additional truck
-                    </div>
-                    <div className="text-lg font-bold text-primary mt-2">FOREVER</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm text-muted-foreground line-through mb-1">Regular Price: $199/month + $49 per truck</div>
-                    <div className="text-lg font-semibold text-destructive">Save $1,800+ per year</div>
-                  </div>
-                </div>
-              </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
@@ -229,38 +201,6 @@ const Index = () => {
               <p className="text-sm text-muted-foreground mb-8">
                 No payment required • Get notified when we launch • Lock in lifetime pricing
               </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
-                    <Timer className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold text-primary">100</div>
-                  <div className="text-sm text-muted-foreground">Founder's Spots Left</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
-                    <DollarSign className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold text-primary">$1,800</div>
-                  <div className="text-sm text-muted-foreground">Yearly Savings</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
-                    <Zap className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold text-primary">Aug 15</div>
-                  <div className="text-sm text-muted-foreground">Launch Date</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
-                    <Bot className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold text-primary">AI</div>
-                  <div className="text-sm text-muted-foreground">Powered Operations</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -280,6 +220,54 @@ const Index = () => {
           
           <div className="max-w-4xl mx-auto">
             <MissedCallsCalculator />
+          </div>
+
+          {/* Transition to Solution */}
+          <div className="text-center mt-16">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-3xl font-bold mb-4 text-primary">
+                Here's How Our AI-Powered System Solves This Problem
+              </h3>
+              <p className="text-xl text-muted-foreground">
+                Advanced AI technology that never sleeps, never misses calls, and captures every profitable opportunity
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-card/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                <Timer className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-2xl font-bold text-primary">100</div>
+              <div className="text-sm text-muted-foreground">Founder's Spots Left</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                <DollarSign className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-2xl font-bold text-primary">$1,800</div>
+              <div className="text-sm text-muted-foreground">Yearly Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                <Zap className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-2xl font-bold text-primary">Aug 15</div>
+              <div className="text-sm text-muted-foreground">Launch Date</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
+                <Bot className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-2xl font-bold text-primary">AI</div>
+              <div className="text-sm text-muted-foreground">Powered Operations</div>
+            </div>
           </div>
         </div>
       </section>
@@ -395,6 +383,44 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Reveal Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 to-primary/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl p-8 mb-6 shadow-lg">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
+                <img 
+                  src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
+                  alt="Logo" 
+                  className="h-16 w-16"
+                />
+                <div className="flex items-center gap-2">
+                  <Bot className="h-4 w-4" />
+                  AI-Powered Founder's Club Lifetime Deal
+                </div>
+              </div>
+              <div className="text-center mb-6">
+                <div className="text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
+                <div className="text-sm text-muted-foreground mb-4">For your first truck</div>
+                <div className="text-xl font-semibold text-foreground">
+                  Lock in just <span className="text-primary font-bold">$15/month</span> for each additional truck
+                </div>
+                <div className="text-lg font-bold text-primary mt-2">FOREVER</div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm text-muted-foreground line-through mb-1">Regular Price: $199/month + $49 per truck</div>
+                <div className="text-lg font-semibold text-destructive">Save $1,800+ per year</div>
+              </div>
+            </div>
+            
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
+              <Star className="mr-2 h-5 w-5" />
+              Lock In My AI-Powered Founder's Price
+            </Button>
           </div>
         </div>
       </section>
