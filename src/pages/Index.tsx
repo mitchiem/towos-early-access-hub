@@ -142,18 +142,18 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 animate-fade-in-up">
               {/* Main Logo - Centered and Large */}
-              <div className="flex justify-center mb-8">
+              <div className="mb-8">
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                   alt="Logo" 
-                  className="h-32 w-auto md:h-40 lg:h-48"
+                  className="h-32 w-auto mx-auto"
                   onError={(e) => {
                     console.log('Main logo failed to load');
                     e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
-              
+
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Founder's Club • Limited Time • First 100 Operators Only
               </div>
@@ -163,7 +163,7 @@ const Index = () => {
                 <span className="text-primary">Start Capturing Every Dollar.</span>
               </h1>
               
-              <p className="text-2xl md:text-4xl lg:text-5xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto font-semibold">
+              <p className="text-2xl md:text-3xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto font-semibold">
                 The Complete Towing Operating System that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
@@ -173,7 +173,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                       alt="Logo" 
-                      className="h-6 w-6"
+                      className="h-8 w-8"
                     />
                     Founder's Club Lifetime Deal
                   </div>
@@ -279,7 +279,7 @@ const Index = () => {
               }}
             />
             <div className="text-left">
-              <div className="text-sm text-muted-foreground">The Complete Towing Operating System</div>
+              <div className="text-2xl font-bold text-foreground">The Complete Towing Operating System</div>
             </div>
           </div>
           <div className="w-16 h-0.5 bg-primary mx-auto"></div>
@@ -384,7 +384,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/df42e0dd-4325-47fb-be18-3aab35725117.png" 
-                  alt="Dispatch Dashboard"
+                  alt="TowOS Dispatch Dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -401,7 +401,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/cea6183d-77d8-4cd1-a779-e5f0b5580d4e.png" 
-                  alt="Driver Communication"
+                  alt="TowOS Driver Communication"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -418,7 +418,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/fec39c6b-3b71-40cd-a650-f6387f747459.png" 
-                  alt="Invoice & Payment"
+                  alt="TowOS Invoice & Payment"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -435,7 +435,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/c7a63297-85f4-43c9-b228-011d842bf166.png" 
-                  alt="Job Assignment"
+                  alt="TowOS Job Assignment"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -452,7 +452,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png" 
-                  alt="Analytics Dashboard"
+                  alt="TowOS Analytics Dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -469,7 +469,7 @@ const Index = () => {
               <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/720636d8-797c-453d-a474-58d08a99966d.png" 
-                  alt="Documentation System"
+                  alt="TowOS Documentation System"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -516,7 +516,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                       alt="Logo" 
-                      className="h-6 w-6"
+                      className="h-8 w-8"
                       onError={(e) => {
                         console.log('Logo failed to load in benefits badge');
                         e.currentTarget.style.display = 'none';
