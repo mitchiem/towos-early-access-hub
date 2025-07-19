@@ -107,7 +107,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img 
-                src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png"
+                src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png"
                 alt="TowOS Logo" 
                 className="h-10 w-auto"
                 onError={(e) => {
@@ -136,7 +136,7 @@ const Index = () => {
             <div className="text-center mb-12 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <img 
-                  src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png"
+                  src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png"
                   alt="TowOS" 
                   className="h-4 w-4"
                   onError={(e) => {
@@ -160,7 +160,7 @@ const Index = () => {
                 <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl p-8 mb-6 max-w-2xl mx-auto shadow-lg">
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
                     <img 
-                      src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png"
+                      src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png"
                       alt="TowOS" 
                       className="h-4 w-4"
                     />
@@ -259,7 +259,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-4 mb-6">
             <img 
-              src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png"
+              src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png"
               alt="TowOS Logo" 
               className="h-12 w-auto"
               onError={(e) => {
@@ -351,7 +351,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png"
+                src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png"
                 alt="TowOS" 
                 className="h-8 w-auto"
                 onError={(e) => {
@@ -504,7 +504,7 @@ const Index = () => {
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
                     <img 
-                      src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png"
+                      src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png"
                       alt="TowOS" 
                       className="h-4 w-4"
                       onError={(e) => {
@@ -562,7 +562,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
-              src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png" 
+              src="/lovable-uploads/0652ba0e-84d4-4d86-be55-db68e229024b.png" 
               alt="TowOS Logo" 
               className="h-8 w-auto"
               onError={(e) => {
