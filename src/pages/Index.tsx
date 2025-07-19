@@ -146,7 +146,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                   alt="Logo" 
-                  className="h-16 w-auto md:h-20 lg:h-24"
+                  className="h-32 w-auto md:h-40 lg:h-48"
                   onError={(e) => {
                     console.log('Main logo failed to load');
                     e.currentTarget.style.display = 'none';
