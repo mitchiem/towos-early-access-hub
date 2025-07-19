@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,7 +20,7 @@ export const MissedCallsCalculator = () => {
           <AlertTriangle className="h-4 w-4" />
           Revenue Loss Calculator
         </div>
-        <h3 className="text-2xl font-bold mb-2">How Much Are Missed Calls Costing You?</h3>
+        <h3 className="text-2xl font-bold mb-2">See How Much Money You're Leaving on the Table</h3>
         <p className="text-muted-foreground">
           Calculate your monthly revenue loss from missed opportunities
         </p>
@@ -73,32 +74,41 @@ export const MissedCallsCalculator = () => {
         </div>
 
         {/* Results */}
-        <div className="bg-gradient-to-r from-destructive/5 to-destructive/10 rounded-lg p-6 space-y-4">
+        <div className="bg-gradient-to-r from-destructive/10 to-destructive/5 border-2 border-destructive/20 rounded-lg p-6 space-y-4">
           <div className="text-center">
-            <div className="text-sm text-muted-foreground mb-1">Monthly Revenue Loss</div>
-            <div className="text-4xl font-bold text-destructive">${monthlyLoss.toLocaleString()}</div>
+            <div className="text-sm text-muted-foreground mb-1">You're Losing This Much Revenue Every Month</div>
+            <div className="text-5xl font-bold text-destructive mb-2">${monthlyLoss.toLocaleString()}</div>
+            <div className="text-lg font-semibold text-destructive">That's ${yearlyLoss.toLocaleString()} per year!</div>
           </div>
           
-          <div className="grid grid-cols-2 gap-4 text-center">
+          <div className="grid grid-cols-2 gap-4 text-center mt-6">
             <div>
               <div className="text-sm text-muted-foreground">Daily Loss</div>
-              <div className="text-xl font-semibold">${dailyLoss.toLocaleString()}</div>
+              <div className="text-xl font-semibold text-destructive">${dailyLoss.toLocaleString()}</div>
             </div>
             <div>
-              <div className="text-sm text-muted-foreground">Yearly Loss</div>
-              <div className="text-xl font-semibold">${yearlyLoss.toLocaleString()}</div>
+              <div className="text-sm text-muted-foreground">Weekly Loss</div>
+              <div className="text-xl font-semibold text-destructive">${(dailyLoss * 7).toLocaleString()}</div>
             </div>
+          </div>
+        </div>
+
+        {/* Comparison */}
+        <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6 text-center">
+          <h4 className="text-lg font-semibold text-primary mb-2">TowOS Founder's Price: $49/month</h4>
+          <p className="text-sm text-muted-foreground mb-4">
+            TowOS costs less than <span className="font-bold text-primary">{Math.round(monthlyLoss / 49)}x</span> what you're losing to missed calls each month
+          </p>
+          <div className="text-2xl font-bold text-primary">
+            ROI: {Math.round(((monthlyLoss - 49) / 49) * 100)}% monthly return
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <p className="text-sm text-muted-foreground mb-4">
-            TowOS can help you recover this revenue by ensuring you never miss another call
-          </p>
-          <Button className="w-full bg-primary hover:bg-primary/90">
+          <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
             <TrendingUp className="mr-2 h-4 w-4" />
-            See How TowOS Can Recover This Revenue
+            Lock In My Founder's Price & Stop Losing Money
           </Button>
         </div>
       </div>

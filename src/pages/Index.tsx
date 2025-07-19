@@ -1,54 +1,61 @@
+
 import { Button } from "@/components/ui/button";
 import { InlineWaitlistForm } from "@/components/InlineWaitlistForm";
 import { MissedCallsCalculator } from "@/components/MissedCallsCalculator";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
 import CountdownClock from "@/components/CountdownClock";
-import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck } from "lucide-react";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X } from "lucide-react";
 
 const Index = () => {
-  const problems = [
+  const beforeAfterItems = [
     {
-      icon: Phone,
-      title: "Missed Calls While Towing",
-      description: "You're out on a job, phone rings, customer needs help... but you can't answer safely. They call your competitor next.",
-      cost: "3-5 calls daily",
-      costLabel: "Missed Revenue Opportunities:"
+      before: {
+        icon: Phone,
+        title: "Missing High-Profit Cash Calls",
+        description: "Phone rings while you're hooking up - customer hangs up and calls your competitor who answers immediately"
+      },
+      after: {
+        icon: CheckCircle,
+        title: "AI Dispatcher Captures Every Call, 24/7",
+        description: "Never miss another call. AI answers instantly, captures customer info, and dispatches the job automatically"
+      }
     },
     {
-      icon: DollarSign,
-      title: "Can't Afford Full-Time Dispatchers",
-      description: "Hiring dispatcher costs $45,000-60,000 yearly plus benefits (BLS data). Small operators can't justify this expense but desperately need the help.",
-      cost: "$45,000 - $60,000",
-      costLabel: "Annual Cost (BLS):"
+      before: {
+        icon: DollarSign,
+        title: "Losing Money to Low-Paying Motor Clubs",
+        description: "Stuck with $65 AAA calls while competitors book $200+ cash calls directly from customers"
+      },
+      after: {
+        icon: TrendingUp,
+        title: "Book More High-Profit Cash Calls Directly",
+        description: "Smart routing sends cash-paying customers directly to you, bypassing low-profit motor club dispatchers"
+      }
     },
     {
-      icon: FileText,
-      title: "Manual Job Assignments",
-      description: "Calling each driver individually, keeping track on paper, forgetting assignments. Conservative estimate: 5-10 minutes per job coordination.",
-      cost: "10-15 hours per week",
-      costLabel: "Time Lost:"
+      before: {
+        icon: FileText,
+        title: "Wasting Hours on Paperwork & Invoicing",
+        description: "10-15 hours per week on manual job coordination, invoicing, and payment follow-ups instead of making money"
+      },
+      after: {
+        icon: Zap,
+        title: "Automate Dispatch, Invoicing & Payments in One Click",
+        description: "Complete job workflow automation - from initial call to final payment collection, all handled automatically"
+      }
     },
     {
-      icon: AlertTriangle,
-      title: "Administrative Chaos & No Driver Accountability",
-      description: "\"Did Jake finish the 5th Street job?\" Time spent on manual invoicing, payment follow-ups, and scheduling coordination adds up quickly.",
-      cost: "2-3 hours daily",
-      costLabel: "Administrative Time:"
-    },
-    {
-      icon: Star,
-      title: "Missing Customer Reviews",
-      description: "Happy customers leave but never share their experience. Studies show 20-30% revenue impact from missing reviews and referrals.",
-      cost: "20-30% potential growth",
-      costLabel: "Missed Opportunity:"
-    },
-    {
-      icon: FileText,
-      title: "Damage Mitigation/Reduce Fake Claims From Dishonest Customers",
-      description: "Missing photos, incomplete paperwork, liability disputes. Insurance industry data shows poor documentation significantly increases claim costs.",
-      cost: "$500 - $3,000 per claim",
-      costLabel: "Claim Cost Range:"
+      before: {
+        icon: HelpCircle,
+        title: "No Idea Where Your Drivers Are",
+        description: "\"Did Jake finish the 5th Street job?\" Constant phone tag and manual check-ins waste time and create confusion"
+      },
+      after: {
+        icon: Monitor,
+        title: "See Your Entire Business in Real-Time on One Map",
+        description: "Live GPS tracking, job status updates, and complete visibility into every driver and job in progress"
+      }
     }
   ];
 
@@ -106,43 +113,47 @@ const Index = () => {
             <div className="text-center mb-12 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Truck className="h-4 w-4" />
-                Early Access • Pre-Launch Pricing
+                Founder's Club • Limited Time • First 100 Operators Only
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                The Complete Towing Operating System
+                Stop Missing High-Profit Cash Calls.<br />
+                <span className="text-primary">Start Capturing Every Dollar.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
-                Run ALL parts of your towing company cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
+                The Complete Towing Operating System that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
               <div className="mb-8">
-                <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
-                    Early Launch Lifetime Pricing
-                  </h2>
-                  <div className="flex items-center justify-center gap-4 mb-4">
-                    <span className="text-3xl font-bold text-primary">$49/month</span>
-                    <span className="text-lg text-muted-foreground line-through">$199/month</span>
+                <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl p-8 mb-6 max-w-2xl mx-auto shadow-lg">
+                  <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
+                    <Star className="h-4 w-4" />
+                    Founder's Club Lifetime Deal
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Lock in this price forever • Limited time • First 100 users only
-                  </p>
+                  <div className="text-center mb-6">
+                    <div className="text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
+                    <div className="text-sm text-muted-foreground mb-4">For your first truck</div>
+                    <div className="text-xl font-semibold text-foreground">
+                      Lock in just <span className="text-primary font-bold">$15/month</span> for each additional truck
+                    </div>
+                    <div className="text-lg font-bold text-primary mt-2">FOREVER</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-sm text-muted-foreground line-through mb-1">Regular Price: $199/month + $49 per truck</div>
+                    <div className="text-lg font-semibold text-destructive">Save $1,800+ per year</div>
+                  </div>
                 </div>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Stop juggling multiple systems. TowOS integrates everything your towing business needs into one powerful operating system.
-                </p>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
-                  <Play className="mr-2 h-5 w-5" />
-                  Join Early Access Waitlist
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl">
+                  <Star className="mr-2 h-5 w-5" />
+                  Lock In My Founder's Price
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                  <Monitor className="mr-2 h-5 w-5" />
+                  <Play className="mr-2 h-5 w-5" />
                   See Live Demo
                 </Button>
               </div>
@@ -157,22 +168,22 @@ const Index = () => {
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                     <Timer className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">One</div>
-                  <div className="text-sm text-muted-foreground">Unified System</div>
+                  <div className="text-2xl font-bold text-primary">100</div>
+                  <div className="text-sm text-muted-foreground">Founder's Spots Left</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
-                    <TrendingUp className="h-6 w-6 text-primary" />
+                    <DollarSign className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">$49</div>
-                  <div className="text-sm text-muted-foreground">Lifetime Pricing</div>
+                  <div className="text-2xl font-bold text-primary">$1,800</div>
+                  <div className="text-sm text-muted-foreground">Yearly Savings</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                     <Zap className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-2xl font-bold text-primary">100</div>
-                  <div className="text-sm text-muted-foreground">Early Access Spots</div>
+                  <div className="text-2xl font-bold text-primary">Aug 15</div>
+                  <div className="text-sm text-muted-foreground">Launch Date</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
@@ -183,16 +194,24 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Calculator and Waitlist Form Side by Side */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <MissedCallsCalculator />
-              </div>
-              <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <InlineWaitlistForm />
-              </div>
-            </div>
+      {/* ROI Calculator Section - Moved Higher */}
+      <section className="py-20 bg-gradient-to-r from-destructive/5 to-destructive/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 text-foreground">
+              See How Much Money You're Leaving on the Table
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Conservative estimates based on industry data and time tracking studies
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <MissedCallsCalculator />
           </div>
         </div>
       </section>
@@ -200,25 +219,57 @@ const Index = () => {
       {/* Countdown Clock Section */}
       <CountdownClock />
 
-      {/* Problems Section */}
+      {/* Before/After Section */}
       <section className="py-20 bg-card/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-primary">
-              How Much Time Are These Problems Actually Costing You?
+              Your Business Before TowOS vs. Your Business With TowOS
             </h2>
             <p className="text-xl text-muted-foreground">
-              Conservative estimates based on industry data and time tracking studies
-            </p>
-            <p className="text-sm text-muted-foreground mt-2">
-              Sources: Bureau of Labor Statistics, Industry surveys, Insurance claim data
+              See the transformation from chaos to control, from lost revenue to maximized profit
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {problems.map((problem, index) => (
+          <div className="max-w-7xl mx-auto space-y-12">
+            {beforeAfterItems.map((item, index) => (
               <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <ProblemCard {...problem} />
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  {/* Before */}
+                  <div className="bg-destructive/5 border-l-4 border-destructive rounded-lg p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-lg bg-destructive/20 flex items-center justify-center">
+                          <X className="h-6 w-6 text-destructive" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2 text-destructive">BEFORE: {item.before.title}</h3>
+                        <p className="text-muted-foreground">{item.before.description}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="hidden md:flex justify-center">
+                    <ArrowRight className="h-8 w-8 text-primary mx-auto" />
+                  </div>
+
+                  {/* After */}
+                  <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                          <item.after.icon className="h-6 w-6 text-primary" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2 text-primary">AFTER: {item.after.title}</h3>
+                        <p className="text-muted-foreground">{item.after.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -228,6 +279,11 @@ const Index = () => {
       {/* Video Testimonial Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-6">
+              Don't Take Our Word For It. Hear From a Tow Boss Like You.
+            </h2>
+          </div>
           <VideoTestimonial />
         </div>
       </section>
@@ -376,7 +432,34 @@ const Index = () => {
           
           <div className="text-center">
             <div className="max-w-lg mx-auto">
-              <InlineWaitlistForm />
+              <div className="bg-card/80 backdrop-blur-sm border-border/50 rounded-lg p-8">
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <Star className="h-4 w-4" />
+                    Get on the Founder's List. Launching August 15th.
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Lock In Your Founder's Price</h3>
+                  <p className="text-muted-foreground">
+                    Be the first to access TowOS and save $1,800+ per year
+                  </p>
+                </div>
+                
+                <div className="w-full">
+                  <iframe
+                    src="https://n8n.annatis.com/form/roadsideroi-waitlist"
+                    width="100%"
+                    height="400"
+                    frameBorder="0"
+                    className="rounded-lg"
+                    title="Join the TowOS Founder's List Form"
+                    sandbox="allow-forms allow-scripts allow-same-origin"
+                  />
+                </div>
+                
+                <p className="text-xs text-muted-foreground text-center mt-4">
+                  No spam. Unsubscribe anytime. We respect your privacy.
+                </p>
+              </div>
             </div>
           </div>
         </div>
