@@ -8,9 +8,13 @@ import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCir
 
 const Index = () => {
   const scrollToSignupForm = () => {
-    const signupForm = document.querySelector('iframe[title="Join the TowOS Founder\'s List Form"]');
-    if (signupForm) {
-      signupForm.scrollIntoView({ behavior: 'smooth' });
+    const signupSection = document.getElementById('signup-section');
+    if (signupSection) {
+      const offsetTop = signupSection.offsetTop - 100; // Add 100px offset from top
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
     }
   };
   const beforeAfterItems = [
@@ -505,7 +509,7 @@ const Index = () => {
           </div>
           
           <div className="text-center">
-            <div className="max-w-lg mx-auto">
+            <div className="max-w-lg mx-auto" id="signup-section">
               <div className="bg-card/80 backdrop-blur-sm border-border/50 rounded-lg p-8">
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
