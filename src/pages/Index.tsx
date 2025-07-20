@@ -4,7 +4,7 @@ import { MissedCallsCalculator } from "@/components/MissedCallsCalculator";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
 import CountdownClock from "@/components/CountdownClock";
-import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X, Bot, Shield, Clock } from "lucide-react";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X, Bot, Shield, Clock, Mail } from "lucide-react";
 
 const Index = () => {
   const scrollToSignupForm = () => {
@@ -149,6 +149,28 @@ const Index = () => {
         "GPS-tagged photos with precise timestamps for every job",
         "Automated customer photo sharing for transparency",
         "Lower insurance premiums with verified proof of care"
+      ]
+    },
+    {
+      icon: MessageCircle,
+      title: "Real-Time Customer Communication Hub",
+      description: "Transform customer experience with intelligent communication and transparency",
+      features: [
+        "Live ETA tracking with automated status updates",
+        "Digital service history and seamless communication portal",
+        "Instant notifications and real-time job progress updates",
+        "95% customer satisfaction increase with 60% reduction in customer calls"
+      ]
+    },
+    {
+      icon: Mail,
+      title: "Digital Dispatching & Email Processing",
+      description: "Eliminate manual motor club call entry with intelligent automation that seamlessly integrates with all major third-party dispatchers and insurance providers",
+      features: [
+        "Automated processing from 25+ major motor clubs: AAA, Agero, Allied Dispatch, Allstate, Geico, Progressive",
+        "Zero manual data entry for third-party calls and email dispatches",
+        "Instant job routing and driver assignment from motor club emails",
+        "90% reduction in manual call processing with instant job activation"
       ]
     }
   ];
