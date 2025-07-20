@@ -96,6 +96,7 @@ export const MissedCallsCalculator = () => {
         {/* Comparison */}
         <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6 text-center">
           <h4 className="text-lg font-semibold text-primary mb-2">TowOS Founder's Price: $49/month</h4>
+          <p className="text-xs text-muted-foreground mb-2">Plus usage fees for AI voice and SMS features</p>
           <p className="text-sm text-muted-foreground mb-4">
             TowOS costs less than <span className="font-bold text-primary">{Math.round(monthlyLoss / 49)}x</span> what you're losing to missed calls each month
           </p>

@@ -461,7 +461,8 @@ const Index = () => {
               </div>
               <div className="text-center mb-6">
                 <div className="text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
-                <div className="text-sm text-muted-foreground mb-4">For your first truck</div>
+                <div className="text-sm text-muted-foreground mb-2">For your first truck</div>
+                <div className="text-xs text-muted-foreground mb-4">Plus usage fees for AI voice and SMS features</div>
                 <div className="text-xl font-semibold text-foreground">
                   Lock in just <span className="text-primary font-bold">$15/month</span> for each additional truck
                 </div>
