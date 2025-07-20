@@ -4,7 +4,7 @@ import { MissedCallsCalculator } from "@/components/MissedCallsCalculator";
 import { ProblemCard } from "@/components/ProblemCard";
 import { VideoTestimonial } from "@/components/VideoTestimonial";
 import CountdownClock from "@/components/CountdownClock";
-import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X, Bot, Shield, Clock, Mail } from "lucide-react";
+import { Phone, DollarSign, HelpCircle, FileText, AlertTriangle, Truck, CheckCircle, Users, TrendingUp, Star, Monitor, MessageCircle, BarChart3, Calendar, Play, Zap, Timer, UserCheck, ArrowRight, X, Bot, Shield, Clock, Mail, Gift } from "lucide-react";
 
 const Index = () => {
   const scrollToSignupForm = () => {
@@ -194,7 +194,7 @@ const Index = () => {
             </div>
             <Button size="sm" className="bg-primary hover:bg-primary/90" onClick={scrollToSignupForm}>
               <Star className="mr-2 h-4 w-4" />
-              Join Founder's Club
+              AI-Powered Founder's Club Lifetime Deal
             </Button>
           </div>
         </div>
@@ -235,15 +235,23 @@ const Index = () => {
               </p>
 
               {/* Single CTA Button */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
                   <Star className="mr-2 h-5 w-5" />
-                  Lock In My AI-Powered System
+                  Lock In Your Lifetime Rate
                 </Button>
               </div>
 
+              {/* FREE Website Offer */}
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Gift className="h-4 w-4" />
+                <span className="font-bold">FREE 5-page business website</span>
+                <span>for new customers until</span>
+                <span className="font-bold text-green-600">August 5th 2025</span>
+              </div>
+
               <p className="text-sm text-muted-foreground mb-8">
-                No payment required • Get notified when we launch • Lock in lifetime pricing
+                No payment required • Get notified when we launch • Lock in lifetime pricing FOREVER
               </p>
             </div>
           </div>
@@ -301,14 +309,14 @@ const Index = () => {
                 <Timer className="h-6 w-6 text-primary" />
               </div>
               <div className="text-2xl font-bold text-primary">100</div>
-              <div className="text-sm text-muted-foreground">Founder's Spots Left</div>
+              <div className="text-sm text-muted-foreground">Lifetime Spots Left</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                 <DollarSign className="h-6 w-6 text-primary" />
               </div>
               <div className="text-2xl font-bold text-primary">$1,800</div>
-              <div className="text-sm text-muted-foreground">Yearly Savings</div>
+              <div className="text-sm text-muted-foreground">Yearly Savings FOREVER</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
@@ -468,9 +476,19 @@ const Index = () => {
                 </div>
                 <div className="text-lg font-bold text-primary mt-2">FOREVER</div>
               </div>
+              
+              {/* FREE Website Offer in Pricing */}
+              <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/30 rounded-lg p-4 mb-4">
+                <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
+                  <Gift className="h-5 w-5" />
+                  <span className="font-bold text-lg">BONUS: FREE 5-page business website</span>
+                </div>
+                <p className="text-sm text-green-600">For new customers until August 5th 2025 • $2,500 value included FREE</p>
+              </div>
+              
               <div className="text-center">
                 <div className="text-sm text-muted-foreground line-through mb-1">Regular Price: $199/month + $49 per truck</div>
-                <div className="text-lg font-semibold text-destructive">Save $1,800+ per year</div>
+                <div className="text-lg font-semibold text-destructive">Save $1,800+ per year FOREVER</div>
               </div>
             </div>
             
@@ -664,10 +682,19 @@ const Index = () => {
                       Get on the AI-Powered Founder's List. Launching August 15th.
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Lock In Your AI-Powered Founder's Price</h3>
-                  <p className="text-muted-foreground">
-                    Be the first to access intelligent towing operations and save $1,800+ per year
+                  <h3 className="text-2xl font-bold mb-2">Lock In Your Lifetime Rate</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Be the first to access intelligent towing operations and save $1,800+ per year FOREVER
                   </p>
+                  
+                  {/* FREE Website Offer in Signup */}
+                  <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/30 rounded-lg p-3 mb-4">
+                    <div className="flex items-center justify-center gap-2 text-green-700 text-sm">
+                      <Gift className="h-4 w-4" />
+                      <span className="font-bold">Plus FREE 5-page business website</span>
+                      <span>until August 5th 2025</span>
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="w-full">
