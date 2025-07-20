@@ -17,6 +17,7 @@ const Index = () => {
       });
     }
   };
+
   const beforeAfterItems = [
     {
       before: {
@@ -127,6 +128,31 @@ const Index = () => {
     }
   ];
 
+  const advancedFeatures = [
+    {
+      icon: Users,
+      title: "Smart Hiring Pipeline",
+      description: "Revolutionary AI-powered hiring system that transforms your recruitment process",
+      features: [
+        "Reduce hiring time by 60% with intelligent automation",
+        "Professional application forms with automated tracking",
+        "Advanced driver vetting to prevent liability issues",
+        "Systematic approach to building reliable, trustworthy teams"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Claims Protection System",
+      description: "Comprehensive protection against false claims and liability issues",
+      features: [
+        "Reduce false claims by 85% with documented photo evidence",
+        "GPS-tagged photos with precise timestamps for every job",
+        "Automated customer photo sharing for transparency",
+        "Lower insurance premiums with verified proof of care"
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-card">
       {/* Header with Logo */}
@@ -183,7 +209,7 @@ const Index = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
-                The Complete Towing Operating System powered by advanced AI that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
+                End the chaos. Focus on your numbers. Our AI-powered towing system stops missed calls, increases efficiency, and reduces costs by unifying dispatch, drivers, customers, hiring and payments in one intelligent platform.
               </p>
 
               {/* Single CTA Button */}
@@ -638,6 +664,54 @@ const Index = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Features Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 to-primary/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Bot className="h-4 w-4" />
+              Advanced AI Features
+            </div>
+            <h2 className="text-4xl font-bold mb-6">
+              Beyond Basic Dispatch: Complete Business Intelligence
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Revolutionary features that transform every aspect of your towing operation
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {advancedFeatures.map((feature, index) => (
+              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-8 border border-primary/20 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center">
+                      <feature.icon className="h-8 w-8 text-primary" />
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                    <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                      {feature.description}
+                    </p>
+                    
+                    <ul className="space-y-3">
+                      {feature.features.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
