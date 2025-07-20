@@ -186,15 +186,11 @@ const Index = () => {
                 The Complete Towing Operating System powered by advanced AI that runs ALL parts of your business cohesively. One unified system for dispatching, drivers, customers, payments, and analytics.
               </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              {/* Single CTA Button */}
+              <div className="flex justify-center mb-8">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
                   <Star className="mr-2 h-5 w-5" />
                   Lock In My AI-Powered System
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                  <Play className="mr-2 h-5 w-5" />
-                  See AI Demo
                 </Button>
               </div>
 
