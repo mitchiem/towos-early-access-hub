@@ -280,6 +280,18 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Video Testimonial Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-6">
+              Don't Take Our Word For It. Hear From a Tow Boss Like You.
+            </h2>
+          </div>
+          <VideoTestimonial />
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-16 bg-card/20">
         <div className="container mx-auto px-4">
@@ -466,18 +478,6 @@ const Index = () => {
               Lock In My AI-Powered Founder's Price
             </Button>
           </div>
-        </div>
-      </section>
-
-      {/* Video Testimonial Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-6">
-              Don't Take Our Word For It. Hear From a Tow Boss Like You.
-            </h2>
-          </div>
-          <VideoTestimonial />
         </div>
       </section>
 
