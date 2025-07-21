@@ -158,53 +158,26 @@ const Index = () => {
       icon: Clock,
       title: "24/7 Coverage",
       description: "Round-the-clock AI-powered operations that never miss a call or opportunity"
-    }
-  ];
-
-  const advancedFeatures = [
+    },
     {
       icon: Users,
       title: "Smart Hiring Pipeline",
-      description: "Revolutionary AI-powered hiring system that transforms your recruitment process",
-      features: [
-        "Reduce hiring time by 60% with intelligent automation",
-        "Professional application forms with automated tracking",
-        "Advanced driver vetting to prevent liability issues",
-        "Systematic approach to building reliable, trustworthy teams"
-      ]
+      description: "AI-powered hiring system that reduces recruitment time by 60% with automated vetting and professional application tracking"
     },
     {
       icon: Shield,
       title: "Claims Protection System",
-      description: "Comprehensive protection against false claims and liability issues",
-      features: [
-        "Reduce false claims by 85% with documented photo evidence",
-        "GPS-tagged photos with precise timestamps for every job",
-        "Automated customer photo sharing for transparency",
-        "Lower insurance premiums with verified proof of care"
-      ]
+      description: "Reduce false claims by 85% with GPS-tagged photos, timestamps, and automated documentation for every job"
     },
     {
       icon: MessageCircle,
-      title: "Real-Time Customer Communication Hub",
-      description: "Transform customer experience with intelligent communication and transparency",
-      features: [
-        "Live ETA tracking with automated status updates",
-        "Digital service history and seamless communication portal",
-        "Instant notifications and real-time job progress updates",
-        "95% customer satisfaction increase with 60% reduction in customer calls"
-      ]
+      title: "Customer Communication Hub",
+      description: "Live ETA tracking, digital service history, and real-time updates that increase satisfaction by 95%"
     },
     {
       icon: Mail,
       title: "Digital Dispatching & Email Processing",
-      description: "Eliminate manual motor club call entry with intelligent automation that seamlessly integrates with all major third-party dispatchers and insurance providers",
-      features: [
-        "Automated processing from 25+ major motor clubs: AAA, Agero, Allied Dispatch, Allstate, Geico, Progressive",
-        "Zero manual data entry for third-party calls and email dispatches",
-        "Instant job routing and driver assignment from motor club emails",
-        "90% reduction in manual call processing with instant job activation"
-      ]
+      description: "Automated processing from 25+ motor clubs with zero manual data entry and 90% reduction in call processing time"
     }
   ];
 
@@ -751,13 +724,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Core System Features Section */}
+      {/* Core System Features Section - Consolidated */}
       <section className="py-20 bg-card/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Bot className="h-4 w-4" />
-              Core System Features
+              Essential Features
             </div>
             <h2 className="text-4xl font-bold mb-6">
               Essential Features for Modern Towing Operations
@@ -767,65 +740,17 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-8 max-w-7xl mx-auto">
             {coreFeatures.map((feature, index) => (
-              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-8 border border-primary/10 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="h-8 w-8 text-primary" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-lg font-semibold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Advanced Features Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 to-primary/10">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Bot className="h-4 w-4" />
-              Advanced AI Features
-            </div>
-            <h2 className="text-4xl font-bold mb-6">
-              Beyond Basic Dispatch: Complete Business Intelligence
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Revolutionary features that transform every aspect of your towing operation
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {advancedFeatures.map((feature, index) => (
-              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-8 border border-primary/20 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center">
-                      <feature.icon className="h-8 w-8 text-primary" />
-                    </div>
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-foreground">{feature.title}</h3>
-                    <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                      {feature.description}
-                    </p>
-                    
-                    <ul className="space-y-3">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </div>
             ))}
