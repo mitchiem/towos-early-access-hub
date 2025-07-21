@@ -128,6 +128,39 @@ const Index = () => {
     }
   ];
 
+  const coreFeatures = [
+    {
+      icon: BarChart3,
+      title: "Smart Job Management",
+      description: "Intelligent job assignment and real-time tracking with automated dispatch optimization"
+    },
+    {
+      icon: TrendingUp,
+      title: "Owner Dashboard & KPIs",
+      description: "Complete business analytics with revenue tracking, performance metrics, and profitability insights"
+    },
+    {
+      icon: Monitor,
+      title: "Website Booking System",
+      description: "Professional booking forms with automated customer intake and seamless job creation"
+    },
+    {
+      icon: MessageCircle,
+      title: "SMS Integration",
+      description: "Automated customer notifications with real-time updates and two-way communication"
+    },
+    {
+      icon: FileText,
+      title: "Invoice Management",
+      description: "Automated invoicing with payment tracking and seamless financial management"
+    },
+    {
+      icon: Clock,
+      title: "24/7 Coverage",
+      description: "Round-the-clock AI-powered operations that never miss a call or opportunity"
+    }
+  ];
+
   const advancedFeatures = [
     {
       icon: Users,
@@ -714,6 +747,40 @@ const Index = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core System Features Section */}
+      <section className="py-20 bg-card/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Bot className="h-4 w-4" />
+              Core System Features
+            </div>
+            <h2 className="text-4xl font-bold mb-6">
+              Essential Features for Modern Towing Operations
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Everything you need to run a professional towing business, powered by intelligent automation
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {coreFeatures.map((feature, index) => (
+              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-8 border border-primary/10 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
