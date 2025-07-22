@@ -182,81 +182,83 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-card">
-      {/* Header with Logo */}
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-card overflow-hidden">
+      {/* Header with Logo - Mobile Responsive */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col items-center gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3">
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                 alt="TowOS Logo" 
-                className="h-40 w-auto"
+                className="h-12 md:h-16 lg:h-20 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load');
                   e.currentTarget.style.display = 'none';
                 }}
               />
             </div>
-            <Button size="sm" className="bg-primary hover:bg-primary/90" onClick={scrollToSignupForm}>
-              <Star className="mr-2 h-4 w-4" />
-              AI-Powered Founder's Club Lifetime Deal
+            <Button size="sm" className="bg-primary hover:bg-primary/90 min-h-[44px] px-3 sm:px-4" onClick={scrollToSignupForm}>
+              <Star className="mr-1 h-4 w-4" />
+              <span className="hidden sm:inline">AI-Powered Founder's Club Lifetime Deal</span>
+              <span className="sm:hidden">Founder's Club Deal</span>
             </Button>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section - Mobile Responsive */}
       <section className="relative overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{ backgroundImage: `url(/lovable-uploads/6a575055-428a-4e0b-837d-3984a0f879f2.png)` }}
         />
-        <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6">
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                   alt="Logo" 
-                  className="h-16 w-16"
+                  className="h-8 sm:h-10 md:h-12 w-auto"
                   onError={(e) => {
                     console.log('Logo failed to load in hero badge');
                     e.currentTarget.style.display = 'none';
                   }}
                 />
                 <div className="flex items-center gap-2">
-                  <Bot className="h-4 w-4" />
-                  AI-Powered • Founder's Club • Limited Time • First 100 Operators Only
+                  <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="hidden sm:inline">AI-Powered • Founder's Club • Limited Time • First 100 Operators Only</span>
+                  <span className="sm:hidden">AI-Powered • First 100 Only</span>
                 </div>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Stop Missing High-Profit Cash Calls.<br />
                 with <span className="text-primary">AI-Powered Dispatch.</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
                 End the chaos. Focus on your numbers. Our AI-powered towing system stops missed calls, increases efficiency, and reduces costs by unifying dispatch, drivers, customers, hiring and payments in one intelligent platform.
               </p>
 
               {/* Single CTA Button */}
               <div className="flex justify-center mb-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
-                  <Star className="mr-2 h-5 w-5" />
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-xl min-h-[44px]" onClick={scrollToSignupForm}>
+                  <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Lock In Your Lifetime Rate
                 </Button>
               </div>
 
               {/* FREE Website Offer */}
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Gift className="h-4 w-4" />
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 text-green-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+                <Gift className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span className="font-bold">FREE 5-page business website</span>
-                <span>for new customers until</span>
-                <span className="font-bold text-green-600">August 5th 2025</span>
+                <span className="hidden sm:inline">for new customers until</span>
+                <span className="font-bold text-green-600">Aug 5th 2025</span>
               </div>
 
-              <p className="text-sm text-muted-foreground mb-8">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-8">
                 No payment required • Get notified when we launch • Lock in lifetime pricing FOREVER
               </p>
             </div>
@@ -265,13 +267,13 @@ const Index = () => {
       </section>
 
       {/* ROI Calculator Section */}
-      <section className="py-20 bg-gradient-to-r from-destructive/5 to-destructive/10">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-destructive/5 to-destructive/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-foreground">
               See How Much Money You're Leaving on the Table
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Conservative estimates based on industry data and time tracking studies
             </p>
           </div>
@@ -283,10 +285,10 @@ const Index = () => {
           {/* Transition to Solution */}
           <div className="text-center mt-16">
             <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl font-bold mb-4 text-primary">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-primary">
                 Here's How Our AI-Powered System Solves This Problem
               </h3>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
                 Advanced AI technology that never sleeps, never misses calls, and captures every profitable opportunity
               </p>
             </div>
@@ -295,10 +297,10 @@ const Index = () => {
       </section>
 
       {/* Video Testimonial Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               Don't Take Our Word For It. Hear From a Tow Boss Like You.
             </h2>
           </div>
@@ -306,66 +308,66 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-card/20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      {/* Stats Section - Mobile Responsive Grid */}
+      <section className="py-12 md:py-16 bg-card/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                 <Timer className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-2xl font-bold text-primary">100</div>
-              <div className="text-sm text-muted-foreground">Lifetime Spots Left</div>
+              <div className="text-xl sm:text-2xl font-bold text-primary">100</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Lifetime Spots Left</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                 <DollarSign className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-2xl font-bold text-primary">$1,800</div>
-              <div className="text-sm text-muted-foreground">Yearly Savings FOREVER</div>
+              <div className="text-xl sm:text-2xl font-bold text-primary">$1,800</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Yearly Savings FOREVER</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-2xl font-bold text-primary">Aug 15</div>
-              <div className="text-sm text-muted-foreground">Launch Date</div>
+              <div className="text-xl sm:text-2xl font-bold text-primary">Aug 15</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Launch Date</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2">
                 <Bot className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-2xl font-bold text-primary">AI</div>
-              <div className="text-sm text-muted-foreground">Powered Operations</div>
+              <div className="text-xl sm:text-2xl font-bold text-primary">AI</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Powered Operations</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* AI Credibility Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/5 to-primary/10">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-primary/5 to-primary/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Bot className="h-5 w-5" />
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+              <Bot className="h-4 w-4 sm:h-5 sm:w-5" />
               Advanced AI Technology
             </div>
-            <h2 className="text-3xl font-bold mb-4 text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Why Our AI Outperforms Traditional Dispatch
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Built with cutting-edge AI that delivers measurable business outcomes
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {aiCredibilityStats.map((stat, index) => (
               <div key={index} className="text-center bg-background/80 backdrop-blur-sm rounded-lg p-6 border border-primary/20">
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">{stat.title}</h3>
-                <p className="text-muted-foreground">{stat.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">{stat.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{stat.description}</p>
               </div>
             ))}
           </div>
@@ -376,21 +378,21 @@ const Index = () => {
       <CountdownClock />
 
       {/* Brand Trust Section */}
-      <section className="py-16 bg-card/10">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-4 mb-6">
+      <section className="py-12 md:py-16 bg-card/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
               alt="Logo" 
-              className="h-48 w-auto"
+              className="h-24 sm:h-32 md:h-40 lg:h-48 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in brand section');
                 e.currentTarget.style.display = 'none';
               }}
             />
-            <div className="text-left">
-              <div className="text-sm text-muted-foreground">The Complete Towing Operating System</div>
-              <div className="text-xs text-primary flex items-center gap-1 mt-1">
+            <div className="text-center sm:text-left">
+              <div className="text-xs sm:text-sm text-muted-foreground">The Complete Towing Operating System</div>
+              <div className="text-xs text-primary flex items-center justify-center sm:justify-start gap-1 mt-1">
                 <Bot className="h-3 w-3" />
                 Powered by Advanced AI
               </div>
@@ -401,13 +403,13 @@ const Index = () => {
       </section>
 
       {/* Before/After Section */}
-      <section className="py-20 bg-card/20">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-20 bg-card/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-primary">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-primary">
               Your Business Before AI vs. Your Business With AI-Powered Operations
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               See the transformation from chaos to intelligent control, from lost revenue to maximized profit
             </p>
           </div>
@@ -415,18 +417,18 @@ const Index = () => {
           <div className="max-w-7xl mx-auto space-y-12">
             {beforeAfterItems.map((item, index) => (
               <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   {/* Before */}
-                  <div className="bg-destructive/5 border-l-4 border-destructive rounded-lg p-6">
+                  <div className="bg-destructive/5 border-l-4 border-destructive rounded-lg p-4 sm:p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-lg bg-destructive/20 flex items-center justify-center">
-                          <X className="h-6 w-6 text-destructive" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-destructive/20 flex items-center justify-center">
+                          <X className="h-5 w-5 sm:h-6 sm:w-6 text-destructive" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold mb-2 text-destructive">BEFORE: {item.before.title}</h3>
-                        <p className="text-muted-foreground">{item.before.description}</p>
+                        <h3 className="text-base sm:text-lg font-semibold mb-2 text-destructive">BEFORE: {item.before.title}</h3>
+                        <p className="text-sm sm:text-base text-muted-foreground">{item.before.description}</p>
                       </div>
                     </div>
                   </div>
@@ -437,16 +439,16 @@ const Index = () => {
                   </div>
 
                   {/* After */}
-                  <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6">
+                  <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-4 sm:p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                          <item.after.icon className="h-6 w-6 text-primary" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                          <item.after.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold mb-2 text-primary">AFTER: {item.after.title}</h3>
-                        <p className="text-muted-foreground">{item.after.description}</p>
+                        <h3 className="text-base sm:text-lg font-semibold mb-2 text-primary">AFTER: {item.after.title}</h3>
+                        <p className="text-sm sm:text-base text-muted-foreground">{item.after.description}</p>
                       </div>
                     </div>
                   </div>
@@ -458,182 +460,184 @@ const Index = () => {
       </section>
 
       {/* Pricing Reveal Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 to-primary/10">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-primary/5 to-primary/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl p-8 mb-6 shadow-lg">
-              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-xl p-6 sm:p-8 mb-6 shadow-lg">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-xs sm:text-sm font-medium mb-4">
                 <img 
                   src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                   alt="Logo" 
-                  className="h-16 w-16"
+                  className="h-8 sm:h-12 md:h-16 w-auto"
                 />
                 <div className="flex items-center gap-2">
-                  <Bot className="h-4 w-4" />
-                  AI-Powered Founder's Club Lifetime Deal
+                  <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="hidden sm:inline">AI-Powered Founder's Club Lifetime Deal</span>
+                  <span className="sm:hidden">Founder's Club Deal</span>
                 </div>
               </div>
               <div className="text-center mb-6">
-                <div className="text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
-                <div className="text-sm text-muted-foreground mb-2">For your first truck</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">$49<span className="text-lg">/month</span></div>
+                <div className="text-xs sm:text-sm text-muted-foreground mb-2">For your first truck</div>
                 <div className="text-xs text-muted-foreground mb-4">Plus usage fees for AI voice and SMS features</div>
-                <div className="text-xl font-semibold text-foreground">
+                <div className="text-base sm:text-lg md:text-xl font-semibold text-foreground">
                   Lock in just <span className="text-primary font-bold">$15/month</span> for each additional truck
                 </div>
-                <div className="text-lg font-bold text-primary mt-2">FOREVER</div>
+                <div className="text-base sm:text-lg font-bold text-primary mt-2">FOREVER</div>
               </div>
               
               {/* FREE Website Offer in Pricing */}
-              <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/30 rounded-lg p-4 mb-4">
+              <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/30 rounded-lg p-3 sm:p-4 mb-4">
                 <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
-                  <Gift className="h-5 w-5" />
-                  <span className="font-bold text-lg">BONUS: FREE 5-page business website</span>
+                  <Gift className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="font-bold text-sm sm:text-lg">BONUS: FREE 5-page business website</span>
                 </div>
-                <p className="text-sm text-green-600">For new customers until August 5th 2025 • $2,500 value included FREE</p>
+                <p className="text-xs sm:text-sm text-green-600">For new customers until August 5th 2025 • $2,500 value included FREE</p>
               </div>
               
               <div className="text-center">
-                <div className="text-sm text-muted-foreground line-through mb-1">Regular Price: $199/month + $49 per truck</div>
-                <div className="text-lg font-semibold text-destructive">Save $1,800+ per year FOREVER</div>
+                <div className="text-xs sm:text-sm text-muted-foreground line-through mb-1">Regular Price: $199/month + $49 per truck</div>
+                <div className="text-sm sm:text-lg font-semibold text-destructive">Save $1,800+ per year FOREVER</div>
               </div>
             </div>
             
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 shadow-xl" onClick={scrollToSignupForm}>
-              <Star className="mr-2 h-5 w-5" />
-              Lock In My AI-Powered Founder's Price
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-xl min-h-[44px]" onClick={scrollToSignupForm}>
+              <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="hidden sm:inline">Lock In My AI-Powered Founder's Price</span>
+              <span className="sm:hidden">Lock In Founder's Price</span>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* App Screenshots Section */}
-      <section className="py-20 bg-gradient-to-br from-background to-muted/20">
-        <div className="container mx-auto px-4">
+      {/* App Screenshots Section - Mobile Responsive */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-background to-muted/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
               <img 
                 src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                 alt="Logo" 
-                className="h-32 w-auto"
+                className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
                 onError={(e) => {
                   console.log('Logo failed to load in app screenshots');
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <div className="text-left">
-                <h2 className="text-4xl font-bold text-foreground">
+              <div className="text-center sm:text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
                   Complete Operating System
                 </h2>
-                <div className="flex items-center gap-2 text-primary mt-2">
-                  <Bot className="h-5 w-5" />
-                  <span className="text-lg font-semibold">AI-Powered</span>
+                <div className="flex items-center justify-center sm:justify-start gap-2 text-primary mt-2">
+                  <Bot className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-base sm:text-lg font-semibold">AI-Powered</span>
                 </div>
               </div>
             </div>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Every screen designed for intelligent towing operations - from first call to final payment
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Dispatch Dashboard */}
             <div className="text-center">
-              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+              <div className="relative mx-auto mb-6 w-48 h-96 sm:w-56 sm:h-[450px] md:w-64 md:h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/df42e0dd-4325-47fb-be18-3aab35725117.png" 
                   alt="Dispatch Dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                 Dispatch Dashboard
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Real-time job management with instant notifications for new tow requests
               </p>
             </div>
 
             {/* Driver Communication Hub */}
             <div className="text-center">
-              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+              <div className="relative mx-auto mb-6 w-48 h-96 sm:w-56 sm:h-[450px] md:w-64 md:h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/cea6183d-77d8-4cd1-a779-e5f0b5580d4e.png" 
                   alt="Driver Communication"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                 Driver Communication Hub
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Seamless coordination between dispatchers and drivers with live job status updates
               </p>
             </div>
 
             {/* Invoice & Payment Tracking */}
             <div className="text-center">
-              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+              <div className="relative mx-auto mb-6 w-48 h-96 sm:w-56 sm:h-[450px] md:w-64 md:h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/fec39c6b-3b71-40cd-a650-f6387f747459.png" 
                   alt="Invoice & Payment"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                 Invoice & Payment Tracking
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Automated invoicing and payment collection with real-time financial insights
               </p>
             </div>
 
             {/* Smart Job Assignment */}
             <div className="text-center">
-              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+              <div className="relative mx-auto mb-6 w-48 h-96 sm:w-56 sm:h-[450px] md:w-64 md:h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/c7a63297-85f4-43c9-b228-011d842bf166.png" 
                   alt="Job Assignment"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                 Smart Job Assignment
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Intelligent driver assignment with customer notes and location tracking
               </p>
             </div>
 
             {/* Performance Analytics */}
             <div className="text-center">
-              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+              <div className="relative mx-auto mb-6 w-48 h-96 sm:w-56 sm:h-[450px] md:w-64 md:h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/527ef173-0869-4708-aaaf-790931ce672d.png" 
                   alt="Analytics Dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                 Performance Analytics
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Track revenue, completed jobs, and staff performance with comprehensive reporting
               </p>
             </div>
 
             {/* Digital Documentation System */}
             <div className="text-center">
-              <div className="relative mx-auto mb-6 w-64 h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
+              <div className="relative mx-auto mb-6 w-48 h-96 sm:w-56 sm:h-[450px] md:w-64 md:h-[500px] bg-black border-8 border-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/720636d8-797c-453d-a474-58d08a99966d.png" 
                   alt="Documentation System"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                 Digital Documentation System
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Required photo capture and vehicle documentation to eliminate liability issues
               </p>
             </div>
@@ -642,63 +646,64 @@ const Index = () => {
       </section>
 
       {/* Benefits Preview Section */}
-      <section className="py-20 bg-card/10">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-20 bg-card/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Bot className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+              <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
               AI-Powered Operations
             </div>
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               One System. Complete Intelligence.
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Stop switching between apps. Our AI-powered system runs your entire towing operation cohesively.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{benefit.description}</p>
               </div>
             ))}
           </div>
           
           <div className="text-center">
             <div className="max-w-lg mx-auto" id="signup-section">
-              <div className="bg-card/80 backdrop-blur-sm border-border/50 rounded-lg p-8">
+              <div className="bg-card/80 backdrop-blur-sm border-border/50 rounded-lg p-6 sm:p-8">
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                  <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
                     <img 
                       src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png"
                       alt="Logo" 
-                      className="h-16 w-16"
+                      className="h-8 sm:h-10 md:h-12 w-auto"
                       onError={(e) => {
                         console.log('Logo failed to load in benefits badge');
                         e.currentTarget.style.display = 'none';
                       }}
                     />
                     <div className="flex items-center gap-2">
-                      <Bot className="h-4 w-4" />
-                      Get on the AI-Powered Founder's List. Launching August 15th.
+                      <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="hidden sm:inline">Get on the AI-Powered Founder's List. Launching August 15th.</span>
+                      <span className="sm:hidden">Founder's List • Aug 15th</span>
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Lock In Your Lifetime Rate</h3>
-                  <p className="text-muted-foreground mb-4">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Lock In Your Lifetime Rate</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4">
                     Be the first to access intelligent towing operations and save $1,800+ per year FOREVER
                   </p>
                   
                   {/* FREE Website Offer in Signup */}
                   <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/30 rounded-lg p-3 mb-4">
-                    <div className="flex items-center justify-center gap-2 text-green-700 text-sm">
-                      <Gift className="h-4 w-4" />
+                    <div className="flex items-center justify-center gap-2 text-green-700 text-xs sm:text-sm">
+                      <Gift className="h-3 w-3 sm:h-4 sm:w-4" />
                       <span className="font-bold">Plus FREE 5-page business website</span>
-                      <span>until August 5th 2025</span>
+                      <span className="hidden sm:inline">until August 5th 2025</span>
                     </div>
                   </div>
                 </div>
@@ -724,31 +729,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Core System Features Section - Consolidated */}
-      <section className="py-20 bg-card/20">
-        <div className="container mx-auto px-4">
+      {/* Core System Features Section - Mobile Responsive Grid */}
+      <section className="py-12 md:py-20 bg-card/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Bot className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
+              <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
               Essential Features
             </div>
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               Essential Features for Modern Towing Operations
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Everything you need to run a professional towing business, powered by intelligent automation
             </p>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 max-w-7xl mx-auto">
             {coreFeatures.map((feature, index) => (
-              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-background/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-primary/10 shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="h-6 w-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-3 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -759,14 +764,14 @@ const Index = () => {
       </section>
 
       {/* James Clear Quote Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-primary/10 to-primary/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
-            <blockquote className="text-2xl md:text-3xl font-medium mb-6 text-foreground leading-relaxed">
+            <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-foreground leading-relaxed">
               "You do not rise to the level of your goals. You fall to the level of your systems."
             </blockquote>
-            <cite className="text-lg text-muted-foreground mb-8 block">— James Clear, Atomic Habits</cite>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <cite className="text-base sm:text-lg text-muted-foreground mb-8 block">— James Clear, Atomic Habits</cite>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               Your towing business needs intelligent systems, not just better goals. 
               Our AI-powered operating system elevates every part of your operation.
             </p>
@@ -775,27 +780,27 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-border py-12">
-        <div className="container mx-auto px-4 text-center">
+      <footer className="bg-background border-t border-border py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
               src="/lovable-uploads/99a76d46-1c2f-4e95-a7ca-2829cd5498b6.png" 
               alt="Logo" 
-              className="h-32 w-auto"
+              className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
               onError={(e) => {
                 console.log('Logo failed to load in footer');
                 e.currentTarget.style.display = 'none';
               }}
             />
           </div>
-          <p className="text-muted-foreground mb-2">
+          <p className="text-sm sm:text-base text-muted-foreground mb-2">
             The Complete Towing Operating System
           </p>
           <div className="flex items-center justify-center gap-2 text-primary mb-4">
-            <Bot className="h-4 w-4" />
-            <span className="text-sm font-medium">Powered by Advanced AI</span>
+            <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="text-xs sm:text-sm font-medium">Powered by Advanced AI</span>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             © 2025 All rights reserved.
           </p>
         </div>
